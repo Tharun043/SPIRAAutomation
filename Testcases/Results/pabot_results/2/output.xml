@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.3 on win32)" generated="2024-08-09T20:37:34.777403" rpa="false" schemaversion="5">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="Forgot password" source="C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\Testcases\LOGIN_PAGE_TEST\Forgot_password.robot">
+<test id="s1-s1-t1" name="FORGOT PASSWORD ELEMENT VERIFICATION" line="6">
+<kw name="Open Login Page" owner="Loginpage_Keywords" type="SETUP">
+<kw name="Create Chrome Driver" owner="webdriver_setup">
+<msg time="2024-08-09T20:37:39.569172" level="INFO">${driver} = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session="62b5197947c862ed19dbedd041c1a67c")&gt;</msg>
+<var>${driver}</var>
+<status status="PASS" start="2024-08-09T20:37:35.278664" elapsed="4.290508"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-09T20:37:39.573274" level="INFO">Opening browser 'headless=chrome' to base url 'about:blank'.</msg>
+<msg time="2024-08-09T20:37:39.573849" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2024-08-09T20:37:39.573849" level="FAIL">ValueError: headless=chrome is not a supported browser.</msg>
+<arg>about:blank</arg>
+<arg>headless=chrome</arg>
+<arg>${driver}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2024-08-09T20:37:39.569172" elapsed="0.008796">ValueError: headless=chrome is not a supported browser.</status>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2024-08-09T20:37:39.577968" elapsed="0.001443"/>
+</kw>
+<status status="FAIL" start="2024-08-09T20:37:35.278664" elapsed="4.300747">ValueError: headless=chrome is not a supported browser.</status>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-08-09T20:37:39.580187" elapsed="0.000854"/>
+</kw>
+<status status="FAIL" start="2024-08-09T20:37:35.277000" elapsed="4.304041">Setup failed:
+ValueError: headless=chrome is not a supported browser.</status>
+</test>
+<status status="FAIL" start="2024-08-09T20:37:34.853283" elapsed="4.728369"/>
+</suite>
+<status status="FAIL" start="2024-08-09T20:37:34.828355" elapsed="4.755310"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Forgot password">Suites.Forgot password</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,29 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.Register here                                                          
+==============================================================================
+REGISTER HERE OPTION FUNCTIONALITY                                      
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\Testcases\LOGIN_PAGE_TEST\Register_here.robot:6
+    T:  REGISTER HERE OPTION FUNCTIONALITY    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\Testcases\LOGIN_PAGE_TEST\Register_here.robot:7
+      Open Login Page    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\Keywords\Loginpage_Keywords.robot:5
+      Open Browser    about:blank    headless=chrome    ${driver}
+      |  ${driver} = <selenium.webdriver.chrome.webdriver.WebDriver (session="63cc2f3af578bafb51527dd1561cd755")> (WebDriver)
+______________________________________________________________________________
+| FAIL |
+Setup failed:
+ValueError: headless=chrome is not a supported browser.
+------------------------------------------------------------------------------
+Suites.Register here                                                  | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Suites                                                                | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\Testcases\Results\pabot_results\5\output.xml

@@ -1,0 +1,7 @@
+robot --listener allure_robotframework          DASHBOARD_TEST/Dashboard.robot \
+                                                 DASHBOARD_TEST/OtherMenu_Test.robot \
+                                                 DASHBOARD_TEST/SalesTracker_Test.robot \
+                                                 LOGIN_PAGE_TEST/Check_Image_presence.robot \
+                                                 LOGIN_PAGE_TEST/Forgot_password.robot \
+                                                 LOGIN_PAGE_TEST/Loginpage_Testcases.robot \
+                                                 LOGIN_PAGE_TEST/Register_here.robot
