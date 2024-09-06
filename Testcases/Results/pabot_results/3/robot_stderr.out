@@ -1,0 +1,37 @@
+[ ERROR ] Error in file 'C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\settings\Settings.robot' on line 3: Importing library 'C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\webdriver_setup.py' failed: JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\webdriver_setup.py", line 6, in <module>
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\venv\Lib\site-packages\webdriver_manager\chrome.py", line 40, in install
+    driver_path = self._get_driver_binary_path(self.driver)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\venv\Lib\site-packages\webdriver_manager\core\manager.py", line 35, in _get_driver_binary_path
+    binary_path = self._cache_manager.find_driver(driver)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\venv\Lib\site-packages\webdriver_manager\core\driver_cache.py", line 108, in find_driver
+    metadata = self.load_metadata_content()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\venv\Lib\site-packages\webdriver_manager\core\driver_cache.py", line 137, in load_metadata_content
+    return json.load(outfile)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+           ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+PYTHONPATH:
+  C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation
+  C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\venv\Scripts\robot.exe
+  C:\Program Files\Python312\python312.zip
+  C:\Program Files\Python312\DLLs
+  C:\Program Files\Python312\Lib
+  C:\Program Files\Python312
+  C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\venv
+  C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\venv\Lib\site-packages

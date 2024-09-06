@@ -1,26 +1,25 @@
 ==============================================================================
 Suites                                                                        
 ==============================================================================
-Suites.OtherMenu Test                                                         
+Suites.Register here                                                          
 ==============================================================================
-OTHER DROPOWN MENU Test                                                 
+REGISTER HERE OPTION FUNCTIONALITY                                      
   Traceback (most recent call last):
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    File  C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\Testcases\DASHBOARD_TEST\OtherMenu_Test.robot:6
-    T:  OTHER DROPOWN MENU Test    
+    File  C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\Testcases\LOGIN_PAGE_TEST\Register_here.robot:6
+    T:  REGISTER HERE OPTION FUNCTIONALITY    
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    File  C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\Testcases\DASHBOARD_TEST\OtherMenu_Test.robot:7
-      Open Login Page    
+    File  C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\Testcases\LOGIN_PAGE_TEST\Register_here.robot:9
+      Register Here    varun.datt@dtskill.com    varun143    1234567
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    File  C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\Keywords\Loginpage_Keywords.robot:5
-      Open Browser    about:blank    headless=chrome    ${driver}
-      |  ${driver} = <selenium.webdriver.chrome.webdriver.WebDriver (session="b66cc02b79d02fb8aab1b75e46d3f325")> (WebDriver)
+    File  C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\Keywords\Loginpage_Keywords.robot:39
+      Input Text    id = username    ${username}
+      |  ${username} = varun143 (str)
 ______________________________________________________________________________
 | FAIL |
-Setup failed:
-ValueError: headless=chrome is not a supported browser.
+Element with locator 'id = username' not found.
 ------------------------------------------------------------------------------
-Suites.OtherMenu Test                                                 | FAIL |
+Suites.Register here                                                  | FAIL |
 1 test, 0 passed, 1 failed
 ==============================================================================
 Suites                                                                | FAIL |

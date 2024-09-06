@@ -3,27 +3,12 @@ Suites
 ==============================================================================
 Suites.Forgot password                                                        
 ==============================================================================
-FORGOT PASSWORD ELEMENT VERIFICATION                                    
-  Traceback (most recent call last):
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    File  C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\Testcases\LOGIN_PAGE_TEST\Forgot_password.robot:6
-    T:  FORGOT PASSWORD ELEMENT VERIFICATION    
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    File  C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\Testcases\LOGIN_PAGE_TEST\Forgot_password.robot:7
-      Open Login Page    
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    File  C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\Keywords\Loginpage_Keywords.robot:5
-      Open Browser    about:blank    headless=chrome    ${driver}
-      |  ${driver} = <selenium.webdriver.chrome.webdriver.WebDriver (session="62b5197947c862ed19dbedd041c1a67c")> (WebDriver)
-______________________________________________________________________________
-| FAIL |
-Setup failed:
-ValueError: headless=chrome is not a supported browser.
+FORGOT PASSWORD ELEMENT VERIFICATION                                  | PASS |
 ------------------------------------------------------------------------------
-Suites.Forgot password                                                | FAIL |
-1 test, 0 passed, 1 failed
+Suites.Forgot password                                                | PASS |
+1 test, 1 passed, 0 failed
 ==============================================================================
-Suites                                                                | FAIL |
-1 test, 0 passed, 1 failed
+Suites                                                                | PASS |
+1 test, 1 passed, 0 failed
 ==============================================================================
 Output:  C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\Testcases\Results\pabot_results\2\output.xml

@@ -1,13 +1,15 @@
 *** Keywords ***
 
 Open Login Page
-    ${driver} =    Create Chrome Driver
-    Open Browser    headlesschrome   ${driver}
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
+    Call Method    ${options}    add_argument    --headless
+    Call Method    ${options}    add_argument    --disable-gpu
+    Create WebDriver    Chrome    options=${options}
     Go To    ${URL}
-
+    sleep   5s
 Fill Login Form
     [Arguments]    ${email}    ${password}
-    Input Text    id=username     ${email}
+    Input Text    id=spira username     ${email}
     Input Text    id=password      ${password}
 
 Click Login Button
@@ -21,6 +23,7 @@ Check Checkbox
 Element Should Be Selected
     [Arguments]    ${locator}
     Wait Until Element Is Visible    ${locator}    10 seconds
+    Click Element    ${locator}
     ${is_selected}=    Get Element Attribute    ${locator}    checked
     Should Be Equal As Strings    ${is_selected}    true
 
@@ -28,7 +31,7 @@ Forgot Password
     [Documentation]    A test case to test the forgot password link
     Click Link    ${FORGOT_PASSWORD}
     Close Browser
-
+    
 Register Here
     click Link    ${REGISTER_HERE}
     [Arguments]    ${email}     ${username}     ${password}

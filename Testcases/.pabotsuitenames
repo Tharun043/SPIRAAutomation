@@ -1,11 +1,11 @@
-datasources:7a056ec719e4b6bb631fd3407f38cd7715321b9f
+datasources:2c29828ffbf922b9175eccb488e646c11b1e0da5
 commandlineoptions:9f8598a690c7367accf83ead504756ddd374acc9
 suitesfrom:no-suites-from-option
-file:712dacc9a751791abf4397972311bdadc1e2bd8d
---suite Suites.Check Image presence
+file:add672ba81f3aa79bfc57961aefbc70d769eea4a
 --suite Suites.Dashboard
+--suite Suites.Check Image presence
 --suite Suites.Forgot password
 --suite Suites.Loginpage Testcases
---suite Suites.OtherMenu Test
 --suite Suites.Register here
 --suite Suites.SalesTracker Test
+--suite Suites.UserMenu Test

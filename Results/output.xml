@@ -1,661 +1,1636 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.12.3 on win32)" generated="2024-08-09T18:01:10.789368" rpa="false" schemaversion="5">
-<suite id="s1" name="LOGIN PAGE TEST &amp; DASHBOARD TEST">
-<suite id="s1-s1" name="LOGIN PAGE TEST" source="C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\Testcases\LOGIN_PAGE_TEST">
-<suite id="s1-s1-s1" name="Check Image presence" source="C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\Testcases\LOGIN_PAGE_TEST\Check_Image_presence.robot">
-<test id="s1-s1-s1-t1" name="SPIRA LOGO PRESENCE TEST" line="6">
+<robot generator="Robot 7.0.1 (Python 3.12.3 on win32)" generated="2024-08-23T13:56:08.607034" rpa="false" schemaversion="5">
+<suite id="s1" name="Dashboard &amp; OtherMenu Test &amp; SalesTracker Test &amp; Check Image presence &amp; Forgot password &amp; Loginpage Testcases &amp; Register here">
+<suite id="s1-s1" name="Dashboard" source="C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\Testcases\DASHBOARD_TEST\Dashboard.robot">
+<test id="s1-s1-t1" name="DASHBOARD ELEMENTS VERIFICATION" line="6">
 <kw name="Open Login Page" owner="Loginpage_Keywords" type="SETUP">
-<kw name="Create Chrome Driver" owner="webdriver_setup">
-<msg time="2024-08-09T18:01:13.060154" level="INFO">${driver} = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session="e4bf6590f1840cee73cfa2b4b9194753")&gt;</msg>
-<var>${driver}</var>
-<status status="PASS" start="2024-08-09T18:01:11.089608" elapsed="1.970546"/>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-08-23T13:56:08.882203" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000021C0E83CBC0&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-08-23T13:56:08.882203" elapsed="0.000000"/>
 </kw>
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-08-09T18:01:13.060154" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<arg>about:blank</arg>
-<arg>chrome</arg>
-<arg>${driver}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-08-09T18:01:13.060154" elapsed="1.350737"/>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-08-23T13:56:08.882203" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-gpu</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-08-23T13:56:08.882203" elapsed="0.000000"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:56:08.883320" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-08-23T13:56:08.882203" elapsed="3.278267"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-08-09T18:01:14.410891" level="INFO">Opening url 'https://spira-qa.dtskill.com/Login'</msg>
+<msg time="2024-08-23T13:56:12.160470" level="INFO">Opening url 'https://spira-qa.dtskill.com/Login'</msg>
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-08-09T18:01:14.410891" elapsed="3.198404"/>
+<status status="PASS" start="2024-08-23T13:56:12.160470" elapsed="5.613951"/>
 </kw>
-<status status="PASS" start="2024-08-09T18:01:11.089608" elapsed="6.519687"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-23T13:56:22.776193" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-23T13:56:17.774421" elapsed="5.001772"/>
 </kw>
-<kw name="Check Image Element Presence" owner="Loginpage_Keywords">
+<status status="PASS" start="2024-08-23T13:56:08.880989" elapsed="13.895204"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-08-23T13:56:22.776193" elapsed="0.021332"/>
+</kw>
+<kw name="Fill Login Form" owner="Loginpage_Keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:56:22.797525" level="INFO">Typing text 'admin@gmail.com' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:56:22.797525" elapsed="0.120222"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:56:22.917747" level="INFO">Typing text '123456' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:56:22.917747" elapsed="0.068113"/>
+</kw>
+<arg>admin@gmail.com</arg>
+<arg>123456</arg>
+<status status="PASS" start="2024-08-23T13:56:22.797525" elapsed="0.189337"/>
+</kw>
+<kw name="Check Checkbox" owner="Loginpage_Keywords">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Selected" owner="Loginpage_Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-23T13:56:22.987862" elapsed="0.061508"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:56:23.049370" level="INFO">Clicking element 'xpath=//*[@id='root']/div/div[2]/div/div/form/div[2]/div/label[1]/span'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:56:23.049370" elapsed="0.036783"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:56:23.099118" level="INFO">${is_selected} = None</msg>
+<var>${is_selected}</var>
+<arg>${locator}</arg>
+<arg>checked</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:56:23.086153" elapsed="0.012965"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2024-08-23T13:56:23.099118" level="INFO">Argument types are:
+&lt;class 'NoneType'&gt;
+&lt;class 'str'&gt;</msg>
+<msg time="2024-08-23T13:56:23.099118" level="FAIL">None != true</msg>
+<arg>${is_selected}</arg>
+<arg>true</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="FAIL" start="2024-08-23T13:56:23.099118" elapsed="0.000000">None != true</status>
+</kw>
+<arg>${locator}</arg>
+<status status="FAIL" start="2024-08-23T13:56:22.986862" elapsed="0.112256">None != true</status>
+</kw>
+<msg time="2024-08-23T13:56:23.099118" level="INFO">${is_selected} = False</msg>
+<var>${is_selected}</var>
+<arg>Element Should Be Selected</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-08-23T13:56:22.986862" elapsed="0.112256"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:56:23.100117" level="INFO">Clicking element 'xpath=//*[@id='root']/div/div[2]/div/div/form/div[2]/div/label[1]/span'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:56:23.100117" elapsed="0.028087"/>
+</kw>
+<arg>not ${is_selected}</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-08-23T13:56:23.099118" elapsed="0.029086"/>
+</kw>
+<arg>${CHECKBOX}</arg>
+<status status="PASS" start="2024-08-23T13:56:22.986862" elapsed="0.141342"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Selected" owner="Loginpage_Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-23T13:56:23.129202" elapsed="0.011434"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:56:23.140636" level="INFO">Clicking element 'xpath=//*[@id='root']/div/div[2]/div/div/form/div[2]/div/label[1]/span'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:56:23.140636" elapsed="0.026281"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:56:23.180650" level="INFO">${is_selected} = None</msg>
+<var>${is_selected}</var>
+<arg>${locator}</arg>
+<arg>checked</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:56:23.167917" elapsed="0.012733"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2024-08-23T13:56:23.180650" level="INFO">Argument types are:
+&lt;class 'NoneType'&gt;
+&lt;class 'str'&gt;</msg>
+<msg time="2024-08-23T13:56:23.180650" level="FAIL">None != true</msg>
+<arg>${is_selected}</arg>
+<arg>true</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="FAIL" start="2024-08-23T13:56:23.180650" elapsed="0.000000">None != true</status>
+</kw>
+<arg>${CHECKBOX}</arg>
+<status status="FAIL" start="2024-08-23T13:56:23.128204" elapsed="0.052446">None != true</status>
+</kw>
+<msg time="2024-08-23T13:56:23.180650" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>Element Should Be Selected</arg>
+<arg>${CHECKBOX}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-08-23T13:56:23.128204" elapsed="0.052446"/>
+</kw>
+<kw name="Click Login Button" owner="Loginpage_Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:56:23.181649" level="INFO">Clicking element 'xpath=//*[@id='root']/div/div[2]/div/div/form/div[3]/button'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:56:23.181649" elapsed="0.036002"/>
+</kw>
+<status status="PASS" start="2024-08-23T13:56:23.181649" elapsed="0.036002"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-23T13:56:43.219345" level="INFO">Slept 20 seconds.</msg>
+<arg>20s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-23T13:56:23.218653" elapsed="20.000692"/>
+</kw>
+<kw name="Navigate To Page After Login" owner="Dashboard_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:56:43.219345" level="INFO">Opening url 'https://spira-qa.dtskill.com/SpiraAI/Dashboard'</msg>
+<arg>${target_page_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-08-23T13:56:43.219345" elapsed="0.284337"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-23T13:56:46.503919" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-23T13:56:43.503682" elapsed="3.000237"/>
+</kw>
+<arg>${TARGET_PAGE_URL}</arg>
+<status status="PASS" start="2024-08-23T13:56:43.219345" elapsed="3.284574"/>
+</kw>
+<kw name="Check Image Element" owner="Dashboard_keywords">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-08-09T18:01:19.765434" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=127.0.6533.100)
-Stacktrace:
-	GetHandleVerifier [0x00007FF6BC7E9632+30946]
-	(No symbol) [0x00007FF6BC79E3C9]
-	(No symbol) [0x00007FF6BC696FDA]
-	(No symbol) [0x00007FF6BC66CB85]
-	(No symbol) [0x00007FF6BC7137A7]
-	(No symbol) [0x00007FF6BC72A771]
-	(No symbol) [0x00007FF6BC70C813]
-	(No symbol) [0x00007FF6BC6DA6E5]
-	(No symbol) [0x00007FF6BC6DB021]
-	GetHandleVerifier [0x00007FF6BC91F83D+1301229]
-	GetHandleVerifier [0x00007FF6BC92BDB7+1351783]
-	GetHandleVerifier [0x00007FF6BC922A03+1313971]
-	GetHandleVerifier [0x00007FF6BC81DD06+245686]
-	(No symbol) [0x00007FF6BC7A758F]
-	(No symbol) [0x00007FF6BC7A3804]
-	(No symbol) [0x00007FF6BC7A3992]
-	(No symbol) [0x00007FF6BC79A3EF]
-	BaseThreadInitThunk [0x00007FFFDE1E257D+29]
-	RtlUserThreadStart [0x00007FFFDEA8AF28+40]
-</msg>
-<msg time="2024-08-09T18:01:19.772447" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=127.0.6533.100)
-Stacktrace:
-	GetHandleVerifier [0x00007FF6BC7E9632+30946]
-	(No symbol) [0x00007FF6BC79E3C9]
-	(No symbol) [0x00007FF6BC696FDA]
-	(No symbol) [0x00007FF6BC66CB85]
-	(No symbol) [0x00007FF6BC7137A7]
-	(No symbol) [0x00007FF6BC72A771]
-	(No symbol) [0x00007FF6BC70C813]
-	(No symbol) [0x00007FF6BC6DA6E5]
-	(No symbol) [0x00007FF6BC6DB021]
-	GetHandleVerifier [0x00007FF6BC91F83D+1301229]
-	GetHandleVerifier [0x00007FF6BC92BDB7+1351783]
-	GetHandleVerifier [0x00007FF6BC922A03+1313971]
-	GetHandleVerifier [0x00007FF6BC81DD06+245686]
-	(No symbol) [0x00007FF6BC7A758F]
-	(No symbol) [0x00007FF6BC7A3804]
-	(No symbol) [0x00007FF6BC7A3992]
-	(No symbol) [0x00007FF6BC79A3EF]
-	BaseThreadInitThunk [0x00007FFFDE1E257D+29]
-	RtlUserThreadStart [0x00007FFFDEA8AF28+40]
-</msg>
-<arg>${IMAGE_LOCATOR}</arg>
+<msg time="2024-08-23T13:56:46.517958" level="INFO">Element 'xpath = //*[@id='root']/nav/div/div[1]/a/img' is displayed.</msg>
+<arg>${IMAGE_PATH}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="FAIL" start="2024-08-09T18:01:17.611923" elapsed="2.220709">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=127.0.6533.100)
-Stacktrace:
-	GetHandleVerifier [0x00007FF6BC7E9632+30946]
-	(No symbol) [0x00007FF6BC79E3C9]
-	(No symbol) [0x00007FF6BC696FDA]
-	(No symbol) [0x00007FF6BC66CB85]
-	(No symbol) [0x00007FF6BC7137A7]
-	(No symbol) [0x00007FF6BC72A771]
-	(No symbol) [0x00007FF6BC70C813]
-	(No symbol) [0x00007FF6BC6DA6E5]
-	(No symbol) [0x00007FF6BC6DB021]
-	GetHandleVerifier [0x00007FF6BC91F83D+1301229]
-	GetHandleVerifier [0x00007FF6BC92BDB7+1351783]
-	GetHandleVerifier [0x00007FF6BC922A03+1313971]
-	GetHandleVerifier [0x00007FF6BC81DD06+245686]
-	(No symbol) [0x00007FF6BC7A758F]
-	(No symbol) [0x00007FF6BC7A3804]
-	(No symbol) [0x00007FF6BC7A3992]
-	(No symbol) [0x00007FF6BC79A3EF]
-	BaseThreadInitThunk [0x00007FFFDE1E257D+29]
-	RtlUserThreadStart [0x00007FFFDEA8AF28+40]
-</status>
+<status status="PASS" start="2024-08-23T13:56:46.503919" elapsed="0.014039"/>
 </kw>
 <kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:56:46.539763" level="INFO">Element 'xpath = //*[@id='root']/nav/div/div[1]/a/img' is displayed.</msg>
+<arg>${IMAGE_PATH}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-23T13:56:46.517958" elapsed="0.021805"/>
+</kw>
+<msg time="2024-08-23T13:56:46.539763" level="INFO">${result} = PASS</msg>
+<msg time="2024-08-23T13:56:46.539763" level="INFO">${status} = None</msg>
 <var>${result}</var>
 <var>${status}</var>
 <arg>Element Should Be Visible</arg>
-<arg>${IMAGE_LOCATOR}</arg>
+<arg>${IMAGE_PATH}</arg>
 <doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="NOT RUN" start="2024-08-09T18:01:19.832632" elapsed="0.000000"/>
+<status status="PASS" start="2024-08-23T13:56:46.517958" elapsed="0.021805"/>
 </kw>
 <kw name="Run Keyword If" owner="BuiltIn">
 <arg>'${status}' == 'PASS'</arg>
 <arg>Log</arg>
 <arg>Image element is present</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="NOT RUN" start="2024-08-09T18:01:19.832632" elapsed="0.000000"/>
+<status status="PASS" start="2024-08-23T13:56:46.539763" elapsed="0.001001"/>
 </kw>
 <kw name="Run Keyword If" owner="BuiltIn">
 <arg>'${status}' == 'FAIL'</arg>
 <arg>Log</arg>
 <arg>Image element is not present</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="NOT RUN" start="2024-08-09T18:01:19.832632" elapsed="0.000000"/>
+<status status="PASS" start="2024-08-23T13:56:46.540764" elapsed="0.000000"/>
 </kw>
-<status status="FAIL" start="2024-08-09T18:01:17.610803" elapsed="2.221829">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=127.0.6533.100)
-Stacktrace:
-	GetHandleVerifier [0x00007FF6BC7E9632+30946]
-	(No symbol) [0x00007FF6BC79E3C9]
-	(No symbol) [0x00007FF6BC696FDA]
-	(No symbol) [0x00007FF6BC66CB85]
-	(No symbol) [0x00007FF6BC7137A7]
-	(No symbol) [0x00007FF6BC72A771]
-	(No symbol) [0x00007FF6BC70C813]
-	(No symbol) [0x00007FF6BC6DA6E5]
-	(No symbol) [0x00007FF6BC6DB021]
-	GetHandleVerifier [0x00007FF6BC91F83D+1301229]
-	GetHandleVerifier [0x00007FF6BC92BDB7+1351783]
-	GetHandleVerifier [0x00007FF6BC922A03+1313971]
-	GetHandleVerifier [0x00007FF6BC81DD06+245686]
-	(No symbol) [0x00007FF6BC7A758F]
-	(No symbol) [0x00007FF6BC7A3804]
-	(No symbol) [0x00007FF6BC7A3992]
-	(No symbol) [0x00007FF6BC79A3EF]
-	BaseThreadInitThunk [0x00007FFFDE1E257D+29]
-	RtlUserThreadStart [0x00007FFFDEA8AF28+40]
-</status>
+<status status="PASS" start="2024-08-23T13:56:46.503919" elapsed="0.036845"/>
+</kw>
+<kw name="Check for Search Box Presence" owner="Dashboard_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${SEARCH_BOX}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-23T13:56:46.541768" elapsed="0.010052"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:56:46.552821" level="INFO">Current page contains element 'xpath = //*[@id='root']/nav/div/div[2]/div[1]/input'.</msg>
+<arg>${SEARCH_BOX}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-23T13:56:46.551820" elapsed="0.001001"/>
+</kw>
+<arg>${SEARCH_BOX}</arg>
+<status status="PASS" start="2024-08-23T13:56:46.540764" elapsed="0.012057"/>
+</kw>
+<kw name="Check for Notification Icon presence" owner="Dashboard_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${NOTIFICATION_ICON}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-23T13:56:46.552821" elapsed="0.015902"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:56:46.574230" level="INFO">Current page contains element 'xpath = //*[@id='root']/nav/div/div[2]/div[2]/a/div'.</msg>
+<arg>${NOTIFICATION_ICON}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-23T13:56:46.568723" elapsed="0.005507"/>
+</kw>
+<arg>${NOTIFICATION_ICON}</arg>
+<status status="PASS" start="2024-08-23T13:56:46.552821" elapsed="0.021409"/>
+</kw>
+<kw name="Check For Profile Logo" owner="Dashboard_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${PROFILE_LOGO}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-23T13:56:46.575250" elapsed="0.013176"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:56:46.589777" level="INFO">Current page contains element 'xpath = //*[@id='root']/nav/div/div[2]/div[2]/div/div/div'.</msg>
+<arg>${PROFILE_LOGO}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-23T13:56:46.588426" elapsed="0.001351"/>
+</kw>
+<arg>${PROFILE_LOGO}</arg>
+<status status="PASS" start="2024-08-23T13:56:46.574230" elapsed="0.015547"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-08-09T18:01:19.833928" elapsed="2.040465"/>
+<status status="PASS" start="2024-08-23T13:56:46.589777" elapsed="2.056622"/>
 </kw>
-<status status="FAIL" start="2024-08-09T18:01:11.089608" elapsed="10.786327">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=127.0.6533.100)
-Stacktrace:
-	GetHandleVerifier [0x00007FF6BC7E9632+30946]
-	(No symbol) [0x00007FF6BC79E3C9]
-	(No symbol) [0x00007FF6BC696FDA]
-	(No symbol) [0x00007FF6BC66CB85]
-	(No symbol) [0x00007FF6BC7137A7]
-	(No symbol) [0x00007FF6BC72A771]
-	(No symbol) [0x00007FF6BC70C813]
-	(No symbol) [0x00007FF6BC6DA6E5]
-	(No symbol) [0x00007FF6BC6DB021]
-	GetHandleVerifier [0x00007FF6BC91F83D+1301229]
-	GetHandleVerifier [0x00007FF6BC92BDB7+1351783]
-	GetHandleVerifier [0x00007FF6BC922A03+1313971]
-	GetHandleVerifier [0x00007FF6BC81DD06+245686]
-	(No symbol) [0x00007FF6BC7A758F]
-	(No symbol) [0x00007FF6BC7A3804]
-	(No symbol) [0x00007FF6BC7A3992]
-	(No symbol) [0x00007FF6BC79A3EF]
-	BaseThreadInitThunk [0x00007FFFDE1E257D+29]
-	RtlUserThreadStart [0x00007FFFDEA8AF28+40]
-</status>
+<status status="PASS" start="2024-08-23T13:56:08.868085" elapsed="39.778314"/>
 </test>
-<status status="FAIL" start="2024-08-09T18:01:10.836262" elapsed="11.041693"/>
+<status status="PASS" start="2024-08-23T13:56:08.636043" elapsed="40.010356"/>
 </suite>
-<suite id="s1-s1-s2" name="Forgot password" source="C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\Testcases\LOGIN_PAGE_TEST\Forgot_password.robot">
-<test id="s1-s1-s2-t1" name="FORGOT PASSWORD ELEMENT VERIFICATION" line="6">
+<suite id="s1-s2" name="OtherMenu Test" source="C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\Testcases\DASHBOARD_TEST\OtherMenu_Test.robot">
+<test id="s1-s2-t1" name="OTHER DROPOWN MENU Test" line="6">
 <kw name="Open Login Page" owner="Loginpage_Keywords" type="SETUP">
-<kw name="Create Chrome Driver" owner="webdriver_setup">
-<msg time="2024-08-09T18:01:23.277837" level="INFO">${driver} = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session="0f597908101cb897d9c60c3ca3c8cd3b")&gt;</msg>
-<var>${driver}</var>
-<status status="PASS" start="2024-08-09T18:01:21.890741" elapsed="1.387096"/>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-08-23T13:56:48.665508" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000021C0E86E0F0&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-08-23T13:56:48.665508" elapsed="0.000000"/>
 </kw>
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-08-09T18:01:23.277837" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<arg>about:blank</arg>
-<arg>chrome</arg>
-<arg>${driver}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-08-09T18:01:23.277837" elapsed="1.819293"/>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-08-23T13:56:48.665508" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-gpu</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-08-23T13:56:48.665508" elapsed="0.000000"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:56:48.665508" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-08-23T13:56:48.665508" elapsed="1.246903"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-08-09T18:01:25.098161" level="INFO">Opening url 'https://spira-qa.dtskill.com/Login'</msg>
+<msg time="2024-08-23T13:56:49.912411" level="INFO">Opening url 'https://spira-qa.dtskill.com/Login'</msg>
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-08-09T18:01:25.098161" elapsed="0.767315"/>
+<status status="PASS" start="2024-08-23T13:56:49.912411" elapsed="3.088983"/>
 </kw>
-<status status="PASS" start="2024-08-09T18:01:21.890741" elapsed="3.974735"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-23T13:56:58.002102" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-23T13:56:53.001394" elapsed="5.000708"/>
+</kw>
+<status status="PASS" start="2024-08-23T13:56:48.665508" elapsed="9.336594"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<msg time="2024-08-09T18:01:25.871454" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=127.0.6533.100)
-Stacktrace:
-	GetHandleVerifier [0x00007FF6BC7E9632+30946]
-	(No symbol) [0x00007FF6BC79E3C9]
-	(No symbol) [0x00007FF6BC696FDA]
-	(No symbol) [0x00007FF6BC66CB85]
-	(No symbol) [0x00007FF6BC7137A7]
-	(No symbol) [0x00007FF6BC72A771]
-	(No symbol) [0x00007FF6BC70C813]
-	(No symbol) [0x00007FF6BC6DA6E5]
-	(No symbol) [0x00007FF6BC6DB021]
-	GetHandleVerifier [0x00007FF6BC91F83D+1301229]
-	GetHandleVerifier [0x00007FF6BC92BDB7+1351783]
-	GetHandleVerifier [0x00007FF6BC922A03+1313971]
-	GetHandleVerifier [0x00007FF6BC81DD06+245686]
-	(No symbol) [0x00007FF6BC7A758F]
-	(No symbol) [0x00007FF6BC7A3804]
-	(No symbol) [0x00007FF6BC7A3992]
-	(No symbol) [0x00007FF6BC79A3EF]
-	BaseThreadInitThunk [0x00007FFFDE1E257D+29]
-	RtlUserThreadStart [0x00007FFFDEA8AF28+40]
-</msg>
-<msg time="2024-08-09T18:01:25.883840" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=127.0.6533.100)
-Stacktrace:
-	GetHandleVerifier [0x00007FF6BC7E9632+30946]
-	(No symbol) [0x00007FF6BC79E3C9]
-	(No symbol) [0x00007FF6BC696FDA]
-	(No symbol) [0x00007FF6BC66CB85]
-	(No symbol) [0x00007FF6BC7137A7]
-	(No symbol) [0x00007FF6BC72A771]
-	(No symbol) [0x00007FF6BC70C813]
-	(No symbol) [0x00007FF6BC6DA6E5]
-	(No symbol) [0x00007FF6BC6DB021]
-	GetHandleVerifier [0x00007FF6BC91F83D+1301229]
-	GetHandleVerifier [0x00007FF6BC92BDB7+1351783]
-	GetHandleVerifier [0x00007FF6BC922A03+1313971]
-	GetHandleVerifier [0x00007FF6BC81DD06+245686]
-	(No symbol) [0x00007FF6BC7A758F]
-	(No symbol) [0x00007FF6BC7A3804]
-	(No symbol) [0x00007FF6BC7A3992]
-	(No symbol) [0x00007FF6BC79A3EF]
-	BaseThreadInitThunk [0x00007FFFDE1E257D+29]
-	RtlUserThreadStart [0x00007FFFDEA8AF28+40]
-</msg>
 <doc>Maximizes current browser window.</doc>
-<status status="FAIL" start="2024-08-09T18:01:25.866935" elapsed="0.037030">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=127.0.6533.100)
-Stacktrace:
-	GetHandleVerifier [0x00007FF6BC7E9632+30946]
-	(No symbol) [0x00007FF6BC79E3C9]
-	(No symbol) [0x00007FF6BC696FDA]
-	(No symbol) [0x00007FF6BC66CB85]
-	(No symbol) [0x00007FF6BC7137A7]
-	(No symbol) [0x00007FF6BC72A771]
-	(No symbol) [0x00007FF6BC70C813]
-	(No symbol) [0x00007FF6BC6DA6E5]
-	(No symbol) [0x00007FF6BC6DB021]
-	GetHandleVerifier [0x00007FF6BC91F83D+1301229]
-	GetHandleVerifier [0x00007FF6BC92BDB7+1351783]
-	GetHandleVerifier [0x00007FF6BC922A03+1313971]
-	GetHandleVerifier [0x00007FF6BC81DD06+245686]
-	(No symbol) [0x00007FF6BC7A758F]
-	(No symbol) [0x00007FF6BC7A3804]
-	(No symbol) [0x00007FF6BC7A3992]
-	(No symbol) [0x00007FF6BC79A3EF]
-	BaseThreadInitThunk [0x00007FFFDE1E257D+29]
-	RtlUserThreadStart [0x00007FFFDEA8AF28+40]
-</status>
-</kw>
-<kw name="Forgot Password" owner="Loginpage_Keywords">
-<doc>A test case to test the forgot password link</doc>
-<status status="NOT RUN" start="2024-08-09T18:01:25.904783" elapsed="0.000000"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-08-09T18:01:25.905486" elapsed="4.178990"/>
-</kw>
-<status status="FAIL" start="2024-08-09T18:01:21.890741" elapsed="8.193735">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=127.0.6533.100)
-Stacktrace:
-	GetHandleVerifier [0x00007FF6BC7E9632+30946]
-	(No symbol) [0x00007FF6BC79E3C9]
-	(No symbol) [0x00007FF6BC696FDA]
-	(No symbol) [0x00007FF6BC66CB85]
-	(No symbol) [0x00007FF6BC7137A7]
-	(No symbol) [0x00007FF6BC72A771]
-	(No symbol) [0x00007FF6BC70C813]
-	(No symbol) [0x00007FF6BC6DA6E5]
-	(No symbol) [0x00007FF6BC6DB021]
-	GetHandleVerifier [0x00007FF6BC91F83D+1301229]
-	GetHandleVerifier [0x00007FF6BC92BDB7+1351783]
-	GetHandleVerifier [0x00007FF6BC922A03+1313971]
-	GetHandleVerifier [0x00007FF6BC81DD06+245686]
-	(No symbol) [0x00007FF6BC7A758F]
-	(No symbol) [0x00007FF6BC7A3804]
-	(No symbol) [0x00007FF6BC7A3992]
-	(No symbol) [0x00007FF6BC79A3EF]
-	BaseThreadInitThunk [0x00007FFFDE1E257D+29]
-	RtlUserThreadStart [0x00007FFFDEA8AF28+40]
-</status>
-</test>
-<status status="FAIL" start="2024-08-09T18:01:21.877955" elapsed="8.206521"/>
-</suite>
-<suite id="s1-s1-s3" name="Loginpage Testcases" source="C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\Testcases\LOGIN_PAGE_TEST\Loginpage_Testcases.robot">
-<test id="s1-s1-s3-t1" name="VERIFY LOGIN FUNCTIONALITY" line="6">
-<kw name="Open Login Page" owner="Loginpage_Keywords" type="SETUP">
-<kw name="Create Chrome Driver" owner="webdriver_setup">
-<msg time="2024-08-09T18:01:31.516044" level="INFO">${driver} = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session="2ac737f8714fb5e148c63042c7ad3759")&gt;</msg>
-<var>${driver}</var>
-<status status="PASS" start="2024-08-09T18:01:30.099449" elapsed="1.416595"/>
-</kw>
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-08-09T18:01:31.517044" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<arg>about:blank</arg>
-<arg>chrome</arg>
-<arg>${driver}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-08-09T18:01:31.517044" elapsed="1.737105"/>
-</kw>
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-08-09T18:01:33.255153" level="INFO">Opening url 'https://spira-qa.dtskill.com/Login'</msg>
-<arg>${URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-08-09T18:01:33.255153" elapsed="0.614838"/>
-</kw>
-<status status="PASS" start="2024-08-09T18:01:30.098444" elapsed="3.771547"/>
+<status status="PASS" start="2024-08-23T13:56:58.002102" elapsed="0.036471"/>
 </kw>
 <kw name="Fill Login Form" owner="Loginpage_Keywords">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-08-09T18:01:33.871115" level="INFO">Typing text 'admin@gmail.com' into text field 'id=username'.</msg>
-<msg time="2024-08-09T18:01:33.886762" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=127.0.6533.100)
-Stacktrace:
-	GetHandleVerifier [0x00007FF6BC7E9632+30946]
-	(No symbol) [0x00007FF6BC79E3C9]
-	(No symbol) [0x00007FF6BC696FDA]
-	(No symbol) [0x00007FF6BC66CB85]
-	(No symbol) [0x00007FF6BC7137A7]
-	(No symbol) [0x00007FF6BC72A771]
-	(No symbol) [0x00007FF6BC70C813]
-	(No symbol) [0x00007FF6BC6DA6E5]
-	(No symbol) [0x00007FF6BC6DB021]
-	GetHandleVerifier [0x00007FF6BC91F83D+1301229]
-	GetHandleVerifier [0x00007FF6BC92BDB7+1351783]
-	GetHandleVerifier [0x00007FF6BC922A03+1313971]
-	GetHandleVerifier [0x00007FF6BC81DD06+245686]
-	(No symbol) [0x00007FF6BC7A758F]
-	(No symbol) [0x00007FF6BC7A3804]
-	(No symbol) [0x00007FF6BC7A3992]
-	(No symbol) [0x00007FF6BC79A3EF]
-	BaseThreadInitThunk [0x00007FFFDE1E257D+29]
-	RtlUserThreadStart [0x00007FFFDEA8AF28+40]
-</msg>
-<msg time="2024-08-09T18:01:33.902096" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=127.0.6533.100)
-Stacktrace:
-	GetHandleVerifier [0x00007FF6BC7E9632+30946]
-	(No symbol) [0x00007FF6BC79E3C9]
-	(No symbol) [0x00007FF6BC696FDA]
-	(No symbol) [0x00007FF6BC66CB85]
-	(No symbol) [0x00007FF6BC7137A7]
-	(No symbol) [0x00007FF6BC72A771]
-	(No symbol) [0x00007FF6BC70C813]
-	(No symbol) [0x00007FF6BC6DA6E5]
-	(No symbol) [0x00007FF6BC6DB021]
-	GetHandleVerifier [0x00007FF6BC91F83D+1301229]
-	GetHandleVerifier [0x00007FF6BC92BDB7+1351783]
-	GetHandleVerifier [0x00007FF6BC922A03+1313971]
-	GetHandleVerifier [0x00007FF6BC81DD06+245686]
-	(No symbol) [0x00007FF6BC7A758F]
-	(No symbol) [0x00007FF6BC7A3804]
-	(No symbol) [0x00007FF6BC7A3992]
-	(No symbol) [0x00007FF6BC79A3EF]
-	BaseThreadInitThunk [0x00007FFFDE1E257D+29]
-	RtlUserThreadStart [0x00007FFFDEA8AF28+40]
-</msg>
+<msg time="2024-08-23T13:56:58.039950" level="INFO">Typing text 'admin@gmail.com' into text field 'id=username'.</msg>
 <arg>id=username</arg>
 <arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="FAIL" start="2024-08-09T18:01:33.871115" elapsed="0.045464">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=127.0.6533.100)
-Stacktrace:
-	GetHandleVerifier [0x00007FF6BC7E9632+30946]
-	(No symbol) [0x00007FF6BC79E3C9]
-	(No symbol) [0x00007FF6BC696FDA]
-	(No symbol) [0x00007FF6BC66CB85]
-	(No symbol) [0x00007FF6BC7137A7]
-	(No symbol) [0x00007FF6BC72A771]
-	(No symbol) [0x00007FF6BC70C813]
-	(No symbol) [0x00007FF6BC6DA6E5]
-	(No symbol) [0x00007FF6BC6DB021]
-	GetHandleVerifier [0x00007FF6BC91F83D+1301229]
-	GetHandleVerifier [0x00007FF6BC92BDB7+1351783]
-	GetHandleVerifier [0x00007FF6BC922A03+1313971]
-	GetHandleVerifier [0x00007FF6BC81DD06+245686]
-	(No symbol) [0x00007FF6BC7A758F]
-	(No symbol) [0x00007FF6BC7A3804]
-	(No symbol) [0x00007FF6BC7A3992]
-	(No symbol) [0x00007FF6BC79A3EF]
-	BaseThreadInitThunk [0x00007FFFDE1E257D+29]
-	RtlUserThreadStart [0x00007FFFDEA8AF28+40]
-</status>
+<status status="PASS" start="2024-08-23T13:56:58.039950" elapsed="0.137204"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:56:58.177749" level="INFO">Typing text '123456' into text field 'id=password'.</msg>
 <arg>id=password</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-08-09T18:01:33.916579" elapsed="0.000000"/>
+<status status="PASS" start="2024-08-23T13:56:58.177749" elapsed="0.058976"/>
 </kw>
 <arg>admin@gmail.com</arg>
 <arg>123456</arg>
-<status status="FAIL" start="2024-08-09T18:01:33.869991" elapsed="0.046588">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=127.0.6533.100)
-Stacktrace:
-	GetHandleVerifier [0x00007FF6BC7E9632+30946]
-	(No symbol) [0x00007FF6BC79E3C9]
-	(No symbol) [0x00007FF6BC696FDA]
-	(No symbol) [0x00007FF6BC66CB85]
-	(No symbol) [0x00007FF6BC7137A7]
-	(No symbol) [0x00007FF6BC72A771]
-	(No symbol) [0x00007FF6BC70C813]
-	(No symbol) [0x00007FF6BC6DA6E5]
-	(No symbol) [0x00007FF6BC6DB021]
-	GetHandleVerifier [0x00007FF6BC91F83D+1301229]
-	GetHandleVerifier [0x00007FF6BC92BDB7+1351783]
-	GetHandleVerifier [0x00007FF6BC922A03+1313971]
-	GetHandleVerifier [0x00007FF6BC81DD06+245686]
-	(No symbol) [0x00007FF6BC7A758F]
-	(No symbol) [0x00007FF6BC7A3804]
-	(No symbol) [0x00007FF6BC7A3992]
-	(No symbol) [0x00007FF6BC79A3EF]
-	BaseThreadInitThunk [0x00007FFFDE1E257D+29]
-	RtlUserThreadStart [0x00007FFFDEA8AF28+40]
-</status>
+<status status="PASS" start="2024-08-23T13:56:58.039950" elapsed="0.196775"/>
 </kw>
 <kw name="Check Checkbox" owner="Loginpage_Keywords">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Selected" owner="Loginpage_Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-23T13:56:58.237737" elapsed="0.016385"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:56:58.255210" level="INFO">Clicking element 'xpath=//*[@id='root']/div/div[2]/div/div/form/div[2]/div/label[1]/span'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:56:58.255210" elapsed="0.031969"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:56:58.299588" level="INFO">${is_selected} = None</msg>
+<var>${is_selected}</var>
+<arg>${locator}</arg>
+<arg>checked</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:56:58.287179" elapsed="0.012409"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2024-08-23T13:56:58.299588" level="INFO">Argument types are:
+&lt;class 'NoneType'&gt;
+&lt;class 'str'&gt;</msg>
+<msg time="2024-08-23T13:56:58.299588" level="FAIL">None != true</msg>
+<arg>${is_selected}</arg>
+<arg>true</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="FAIL" start="2024-08-23T13:56:58.299588" elapsed="0.000000">None != true</status>
+</kw>
+<arg>${locator}</arg>
+<status status="FAIL" start="2024-08-23T13:56:58.237737" elapsed="0.061851">None != true</status>
+</kw>
+<msg time="2024-08-23T13:56:58.299588" level="INFO">${is_selected} = False</msg>
+<var>${is_selected}</var>
+<arg>Element Should Be Selected</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-08-23T13:56:58.237737" elapsed="0.061851"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:56:58.300608" level="INFO">Clicking element 'xpath=//*[@id='root']/div/div[2]/div/div/form/div[2]/div/label[1]/span'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:56:58.300608" elapsed="0.026540"/>
+</kw>
+<arg>not ${is_selected}</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-08-23T13:56:58.300608" elapsed="0.026540"/>
+</kw>
 <arg>${CHECKBOX}</arg>
-<status status="NOT RUN" start="2024-08-09T18:01:33.916579" elapsed="0.000000"/>
+<status status="PASS" start="2024-08-23T13:56:58.237737" elapsed="0.089411"/>
 </kw>
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Selected" owner="Loginpage_Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-23T13:56:58.327834" elapsed="0.012043"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:56:58.340877" level="INFO">Clicking element 'xpath=//*[@id='root']/div/div[2]/div/div/form/div[2]/div/label[1]/span'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:56:58.339877" elapsed="0.026346"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:56:58.376374" level="INFO">${is_selected} = None</msg>
+<var>${is_selected}</var>
+<arg>${locator}</arg>
+<arg>checked</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:56:58.366223" elapsed="0.010151"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2024-08-23T13:56:58.376374" level="INFO">Argument types are:
+&lt;class 'NoneType'&gt;
+&lt;class 'str'&gt;</msg>
+<msg time="2024-08-23T13:56:58.376374" level="FAIL">None != true</msg>
+<arg>${is_selected}</arg>
+<arg>true</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="FAIL" start="2024-08-23T13:56:58.376374" elapsed="0.000000">None != true</status>
+</kw>
+<arg>${CHECKBOX}</arg>
+<status status="FAIL" start="2024-08-23T13:56:58.327834" elapsed="0.048540">None != true</status>
+</kw>
+<msg time="2024-08-23T13:56:58.376374" level="INFO">${selected} = False</msg>
 <var>${selected}</var>
 <arg>Element Should Be Selected</arg>
 <arg>${CHECKBOX}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="NOT RUN" start="2024-08-09T18:01:33.917587" elapsed="0.000000"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<arg>${selected}</arg>
-<arg>Log</arg>
-<arg>The checkbox is checked</arg>
-<arg>ELSE</arg>
-<arg>Fail</arg>
-<arg>The checkbox is not checked</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="NOT RUN" start="2024-08-09T18:01:33.918589" elapsed="0.000000"/>
+<status status="PASS" start="2024-08-23T13:56:58.327834" elapsed="0.048540"/>
 </kw>
 <kw name="Click Login Button" owner="Loginpage_Keywords">
-<status status="NOT RUN" start="2024-08-09T18:01:33.918589" elapsed="0.000000"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:56:58.377372" level="INFO">Clicking element 'xpath=//*[@id='root']/div/div[2]/div/div/form/div[3]/button'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:56:58.377372" elapsed="0.034048"/>
+</kw>
+<status status="PASS" start="2024-08-23T13:56:58.377372" elapsed="0.034048"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-23T13:57:18.412896" level="INFO">Slept 20 seconds.</msg>
+<arg>20s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-23T13:56:58.411420" elapsed="20.001476"/>
+</kw>
+<kw name="Navigate To Page After Login" owner="Dashboard_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:57:18.412896" level="INFO">Opening url 'https://spira-qa.dtskill.com/SpiraAI/Dashboard'</msg>
+<arg>${target_page_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-08-23T13:57:18.412896" elapsed="0.277745"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-23T13:57:21.691279" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-23T13:57:18.690641" elapsed="3.000638"/>
+</kw>
+<arg>${TARGET_PAGE_URL}</arg>
+<status status="PASS" start="2024-08-23T13:57:18.412896" elapsed="3.278383"/>
+</kw>
+<kw name="Test Other Dropdown" owner="Dashboard_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${USER_MANAGEMENT}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-23T13:57:21.691279" elapsed="0.013016"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:57:21.704295" level="INFO">Clicking element 'xpath = //*[@id='root']/main/aside/ul/li[3]/div[1]'.</msg>
+<arg>${USER_MANAGEMENT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:57:21.704295" elapsed="0.048510"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-23T13:57:24.767256" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-23T13:57:21.753805" elapsed="3.013451"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${USER_PATH}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-23T13:57:24.767256" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:57:24.767256" level="INFO">Clicking element 'xpath = //*[@id='root']/main/aside/ul/li[3]/div[2]/div/ul/div'.</msg>
+<arg>${USER_PATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:57:24.767256" elapsed="0.100126"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:57:24.886731" level="INFO">${selected_option} = Users</msg>
+<var>${selected_option}</var>
+<arg>${USER_PATH}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:57:24.867382" elapsed="0.019349"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${selected_option}</arg>
+<arg>Users</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-08-23T13:57:24.886731" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-23T13:57:27.887547" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-23T13:57:24.886731" elapsed="3.000816"/>
+</kw>
+<status status="PASS" start="2024-08-23T13:57:21.691279" elapsed="6.196268"/>
+</kw>
+<kw name="TEST Quality Menu" owner="Dashboard_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${QUALITY}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-23T13:57:27.887547" elapsed="0.013420"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:57:27.900967" level="INFO">Clicking element 'xpath = //*[@id='root']/main/aside/ul/li[4]/div[1]'.</msg>
+<arg>${QUALITY}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:57:27.900967" elapsed="0.057230"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-23T13:57:30.959736" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-23T13:57:27.958197" elapsed="3.001539"/>
+</kw>
+<status status="PASS" start="2024-08-23T13:57:27.887547" elapsed="3.072189"/>
+</kw>
+<kw name="Test Quote generator" owner="Dashboard_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${QUOTE_GENERATOR}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-23T13:57:30.962349" elapsed="0.032080"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:57:30.994429" level="INFO">Clicking element 'xpath = //*[@id='root']/main/aside/ul/li[5]/div[1]'.</msg>
+<arg>${QUOTE_GENERATOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:57:30.994429" elapsed="0.067603"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-23T13:57:34.062402" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-23T13:57:31.062032" elapsed="3.000370"/>
+</kw>
+<status status="PASS" start="2024-08-23T13:57:30.959736" elapsed="3.102666"/>
+</kw>
+<kw name="Test Feedback Menu" owner="Dashboard_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FEEDBACK}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-23T13:57:34.064411" elapsed="0.015637"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:57:34.080048" level="INFO">Clicking element 'xpath = //*[@id='root']/main/aside/ul/li[6]/div[1]'.</msg>
+<arg>${FEEDBACK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:57:34.080048" elapsed="0.042269"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-23T13:57:37.123359" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-23T13:57:34.122317" elapsed="3.001042"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FEEDBACKFORM_PATH}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-23T13:57:37.124897" elapsed="0.018339"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:57:37.148240" level="INFO">Current page contains element 'xpath = //*[@id='root']/main/aside/ul/li[6]/div[2]/div/ul/div[1]'.</msg>
+<arg>${FEEDBACKFORM_PATH}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-23T13:57:37.144242" elapsed="0.003998"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-23T13:57:38.148792" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-23T13:57:37.148240" elapsed="1.000552"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FEEDBACKDATA_PATH}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-23T13:57:38.148792" elapsed="0.023154"/>
+</kw>
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:57:38.171946" level="INFO">Current page contains element 'xpath = //*[@id='root']/main/aside/ul/li[6]/div[2]/div/ul/div[2]'.</msg>
+<arg>${FEEDBACKDATA_PATH}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-08-23T13:57:38.171946" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-23T13:57:39.172670" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-23T13:57:38.171946" elapsed="1.000724"/>
+</kw>
+<status status="PASS" start="2024-08-23T13:57:34.064411" elapsed="5.108259"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-08-09T18:01:33.919588" elapsed="2.105867"/>
+<status status="PASS" start="2024-08-23T13:57:39.174190" elapsed="2.052481"/>
 </kw>
-<status status="FAIL" start="2024-08-09T18:01:30.098444" elapsed="5.927997">NoSuchWindowException: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=127.0.6533.100)
-Stacktrace:
-	GetHandleVerifier [0x00007FF6BC7E9632+30946]
-	(No symbol) [0x00007FF6BC79E3C9]
-	(No symbol) [0x00007FF6BC696FDA]
-	(No symbol) [0x00007FF6BC66CB85]
-	(No symbol) [0x00007FF6BC7137A7]
-	(No symbol) [0x00007FF6BC72A771]
-	(No symbol) [0x00007FF6BC70C813]
-	(No symbol) [0x00007FF6BC6DA6E5]
-	(No symbol) [0x00007FF6BC6DB021]
-	GetHandleVerifier [0x00007FF6BC91F83D+1301229]
-	GetHandleVerifier [0x00007FF6BC92BDB7+1351783]
-	GetHandleVerifier [0x00007FF6BC922A03+1313971]
-	GetHandleVerifier [0x00007FF6BC81DD06+245686]
-	(No symbol) [0x00007FF6BC7A758F]
-	(No symbol) [0x00007FF6BC7A3804]
-	(No symbol) [0x00007FF6BC7A3992]
-	(No symbol) [0x00007FF6BC79A3EF]
-	BaseThreadInitThunk [0x00007FFFDE1E257D+29]
-	RtlUserThreadStart [0x00007FFFDEA8AF28+40]
-</status>
+<status status="PASS" start="2024-08-23T13:56:48.664943" elapsed="52.561728"/>
 </test>
-<status status="FAIL" start="2024-08-09T18:01:30.084476" elapsed="5.941965"/>
+<status status="PASS" start="2024-08-23T13:56:48.646399" elapsed="52.580272"/>
 </suite>
-<suite id="s1-s1-s4" name="Register here" source="C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\Testcases\LOGIN_PAGE_TEST\Register_here.robot">
-<test id="s1-s1-s4-t1" name="REGISTER HERE OPTION FUNCTIONALITY" line="6">
+<suite id="s1-s3" name="SalesTracker Test" source="C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\Testcases\DASHBOARD_TEST\SalesTracker_Test.robot">
+<test id="s1-s3-t1" name="Sales Tracker MENU Test" line="6">
 <kw name="Open Login Page" owner="Loginpage_Keywords" type="SETUP">
-<kw name="Create Chrome Driver" owner="webdriver_setup">
-<var>${driver}</var>
-<status status="FAIL" start="2024-08-09T18:01:38.048427" elapsed="4.926634">Execution terminated by signal</status>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-08-23T13:57:41.254348" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000021C0E862510&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-08-23T13:57:41.253357" elapsed="0.000991"/>
 </kw>
-<kw name="Open Browser" owner="SeleniumLibrary">
-<arg>about:blank</arg>
-<arg>chrome</arg>
-<arg>${driver}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="NOT RUN" start="2024-08-09T18:01:42.975061" elapsed="0.000000"/>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-08-23T13:57:41.254348" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-gpu</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-08-23T13:57:41.254348" elapsed="0.000000"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:57:41.254348" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-08-23T13:57:41.254348" elapsed="1.258039"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:57:42.512387" level="INFO">Opening url 'https://spira-qa.dtskill.com/Login'</msg>
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="NOT RUN" start="2024-08-09T18:01:42.975061" elapsed="0.000000"/>
+<status status="PASS" start="2024-08-23T13:57:42.512387" elapsed="2.101969"/>
 </kw>
-<status status="FAIL" start="2024-08-09T18:01:38.048427" elapsed="4.926634">Execution terminated by signal</status>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-23T13:57:49.615334" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-23T13:57:44.614356" elapsed="5.000978"/>
+</kw>
+<status status="PASS" start="2024-08-23T13:57:41.253357" elapsed="8.361977"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-08-23T13:57:49.615334" elapsed="0.015208"/>
+</kw>
+<kw name="Fill Login Form" owner="Loginpage_Keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:57:49.630542" level="INFO">Typing text 'admin@gmail.com' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:57:49.630542" elapsed="0.118751"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:57:49.750295" level="INFO">Typing text '123456' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:57:49.749293" elapsed="0.074398"/>
+</kw>
+<arg>admin@gmail.com</arg>
+<arg>123456</arg>
+<status status="PASS" start="2024-08-23T13:57:49.630542" elapsed="0.193149"/>
+</kw>
+<kw name="Check Checkbox" owner="Loginpage_Keywords">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Selected" owner="Loginpage_Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-23T13:57:49.824691" elapsed="0.016001"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:57:49.840692" level="INFO">Clicking element 'xpath=//*[@id='root']/div/div[2]/div/div/form/div[2]/div/label[1]/span'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:57:49.840692" elapsed="0.035180"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:57:49.887881" level="INFO">${is_selected} = None</msg>
+<var>${is_selected}</var>
+<arg>${locator}</arg>
+<arg>checked</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:57:49.875872" elapsed="0.012009"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2024-08-23T13:57:49.887881" level="INFO">Argument types are:
+&lt;class 'NoneType'&gt;
+&lt;class 'str'&gt;</msg>
+<msg time="2024-08-23T13:57:49.887881" level="FAIL">None != true</msg>
+<arg>${is_selected}</arg>
+<arg>true</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="FAIL" start="2024-08-23T13:57:49.887881" elapsed="0.000000">None != true</status>
+</kw>
+<arg>${locator}</arg>
+<status status="FAIL" start="2024-08-23T13:57:49.824691" elapsed="0.063190">None != true</status>
+</kw>
+<msg time="2024-08-23T13:57:49.887881" level="INFO">${is_selected} = False</msg>
+<var>${is_selected}</var>
+<arg>Element Should Be Selected</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-08-23T13:57:49.824691" elapsed="0.063190"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:57:49.888898" level="INFO">Clicking element 'xpath=//*[@id='root']/div/div[2]/div/div/form/div[2]/div/label[1]/span'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:57:49.887881" elapsed="0.029999"/>
+</kw>
+<arg>not ${is_selected}</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-08-23T13:57:49.887881" elapsed="0.029999"/>
+</kw>
+<arg>${CHECKBOX}</arg>
+<status status="PASS" start="2024-08-23T13:57:49.823691" elapsed="0.094189"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Selected" owner="Loginpage_Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-23T13:57:49.918880" elapsed="0.013164"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:57:49.932044" level="INFO">Clicking element 'xpath=//*[@id='root']/div/div[2]/div/div/form/div[2]/div/label[1]/span'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:57:49.932044" elapsed="0.028647"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:57:49.973759" level="INFO">${is_selected} = None</msg>
+<var>${is_selected}</var>
+<arg>${locator}</arg>
+<arg>checked</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:57:49.960691" elapsed="0.013068"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2024-08-23T13:57:49.973759" level="INFO">Argument types are:
+&lt;class 'NoneType'&gt;
+&lt;class 'str'&gt;</msg>
+<msg time="2024-08-23T13:57:49.973759" level="FAIL">None != true</msg>
+<arg>${is_selected}</arg>
+<arg>true</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="FAIL" start="2024-08-23T13:57:49.973759" elapsed="0.000000">None != true</status>
+</kw>
+<arg>${CHECKBOX}</arg>
+<status status="FAIL" start="2024-08-23T13:57:49.918880" elapsed="0.054879">None != true</status>
+</kw>
+<msg time="2024-08-23T13:57:49.973759" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>Element Should Be Selected</arg>
+<arg>${CHECKBOX}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-08-23T13:57:49.918880" elapsed="0.054879"/>
+</kw>
+<kw name="Click Login Button" owner="Loginpage_Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:57:49.974758" level="INFO">Clicking element 'xpath=//*[@id='root']/div/div[2]/div/div/form/div[3]/button'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:57:49.974758" elapsed="0.037001"/>
+</kw>
+<status status="PASS" start="2024-08-23T13:57:49.974758" elapsed="0.037001"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-23T13:58:00.012412" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-23T13:57:50.011759" elapsed="10.000653"/>
+</kw>
+<kw name="Navigate To Page After Login" owner="Dashboard_keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:58:00.012412" level="INFO">Opening url 'https://spira-qa.dtskill.com/SpiraAI/Dashboard'</msg>
+<arg>${target_page_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-08-23T13:58:00.012412" elapsed="0.308424"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-23T13:58:03.324842" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-23T13:58:00.320836" elapsed="3.004006"/>
+</kw>
+<arg>${TARGET_PAGE_URL}</arg>
+<status status="PASS" start="2024-08-23T13:58:00.012412" elapsed="3.312430"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:58:03.326042" level="INFO">Clicking element 'xpath = //*[@id='root']/main/aside/ul/li[2]/div[1]/div[2]'.</msg>
+<arg>${DROPDOWN_PATH_CLICK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:58:03.325671" elapsed="0.032853"/>
+</kw>
+<kw name="Test SalesTracker Menu" owner="Dashboard_keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${DASHBOARD_PATH}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-23T13:58:03.359523" elapsed="0.231662"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:58:03.591185" level="INFO">Clicking element 'xpath = //*[@id='root']/main/aside/ul/li[2]/div[2]/div/ul/div[1]'.</msg>
+<arg>${DASHBOARD_PATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:58:03.591185" elapsed="0.035637"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:58:03.645648" level="INFO">${selected_option} = Dashboard</msg>
+<var>${selected_option}</var>
+<arg>${DASHBOARD_PATH}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:58:03.627822" elapsed="0.017826"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${selected_option}</arg>
+<arg>Dashboard</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-08-23T13:58:03.645648" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-23T13:58:06.646023" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-23T13:58:03.645648" elapsed="3.000375"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ALLENQUIRIES_PATH}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-23T13:58:06.646023" elapsed="0.013014"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:58:06.659037" level="INFO">Clicking element 'xpath = //*[@id='root']/main/aside/ul/li[2]/div[2]/div/ul/div[2]'.</msg>
+<arg>${ALLENQUIRIES_PATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:58:06.659037" elapsed="0.118920"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:58:06.798488" level="INFO">${selected_option} = All Enquiries</msg>
+<var>${selected_option}</var>
+<arg>${ALLENQUIRIES_PATH}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:58:06.777957" elapsed="0.020531"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${selected_option}</arg>
+<arg>All Enquiries</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-08-23T13:58:06.798488" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-23T13:58:09.799713" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-23T13:58:06.798488" elapsed="3.001225"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${AWAITINGQUOTES_PATH}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-23T13:58:09.799713" elapsed="0.011018"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:58:09.810731" level="INFO">Clicking element 'xpath = //*[@id='root']/main/aside/ul/li[2]/div[2]/div/ul/div[3]'.</msg>
+<arg>${AWAITINGQUOTES_PATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:58:09.810731" elapsed="0.105851"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:58:09.931364" level="INFO">${selected_option} = Awaiting Quotes</msg>
+<var>${selected_option}</var>
+<arg>${AWAITINGQUOTES_PATH}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:58:09.916582" elapsed="0.014782"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${selected_option}</arg>
+<arg>Awaiting Quotes</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-08-23T13:58:09.932364" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-23T13:58:12.932838" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-23T13:58:09.932364" elapsed="3.000474"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${AWAITINGORDERS_PATH}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-23T13:58:12.932838" elapsed="0.013537"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:58:12.946375" level="INFO">Clicking element 'xpath = //*[@id='root']/main/aside/ul/li[2]/div[2]/div/ul/div[4]'.</msg>
+<arg>${AWAITINGORDERS_PATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:58:12.946375" elapsed="0.080945"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:58:13.045019" level="INFO">${selected_option} = Awaiting Order</msg>
+<var>${selected_option}</var>
+<arg>${AWAITINGORDERS_PATH}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:58:13.027320" elapsed="0.017699"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${selected_option}</arg>
+<arg>Awaiting Order</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-08-23T13:58:13.045019" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-23T13:58:16.045610" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-23T13:58:13.045019" elapsed="3.000591"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ORDERPLACED_PATH}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-23T13:58:16.045610" elapsed="0.022228"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:58:16.067838" level="INFO">Clicking element 'xpath = //*[@id='root']/main/aside/ul/li[2]/div[2]/div/ul/div[5]'.</msg>
+<arg>${ORDERPLACED_PATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:58:16.067838" elapsed="0.067161"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:58:16.150971" level="INFO">${selected_option} = Order Placed</msg>
+<var>${selected_option}</var>
+<arg>${ORDERPLACED_PATH}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:58:16.134999" elapsed="0.015972"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${selected_option}</arg>
+<arg>Order Placed</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-08-23T13:58:16.150971" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-23T13:58:19.151243" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-23T13:58:16.150971" elapsed="3.000272"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${REPORT_PATH}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-23T13:58:19.151243" elapsed="0.013009"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:58:19.164252" level="INFO">Clicking element 'xpath = //*[@id='root']/main/aside/ul/li[2]/div[2]/div/ul/div[6]'.</msg>
+<arg>${REPORT_PATH}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:58:19.164252" elapsed="0.027272"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:58:19.201544" level="INFO">${selected_option} = Report</msg>
+<var>${selected_option}</var>
+<arg>${REPORT_PATH}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:58:19.191524" elapsed="0.010020"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${selected_option}</arg>
+<arg>Report</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-08-23T13:58:19.201619" elapsed="0.000174"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-23T13:58:22.202358" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-23T13:58:19.201793" elapsed="3.000565"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:58:22.202358" level="INFO">Clicking element 'xpath = //*[@id='root']/main/aside/ul/li[2]/div[1]/div[2]'.</msg>
+<arg>${DROPDOWN_PATH_CLICK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:58:22.202358" elapsed="0.037198"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-23T13:58:23.240140" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-23T13:58:22.239556" elapsed="1.000584"/>
+</kw>
+<status status="PASS" start="2024-08-23T13:58:03.359523" elapsed="19.880617"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-08-09T18:01:42.975061" elapsed="0.000000"/>
+<status status="PASS" start="2024-08-23T13:58:23.240140" elapsed="2.077447"/>
 </kw>
-<status status="FAIL" start="2024-08-09T18:01:38.048427" elapsed="4.926634">Setup failed:
-Execution terminated by signal</status>
+<status status="PASS" start="2024-08-23T13:57:41.252357" elapsed="44.065230"/>
 </test>
-<status status="FAIL" start="2024-08-09T18:01:36.026441" elapsed="6.948620"/>
+<status status="PASS" start="2024-08-23T13:57:41.226671" elapsed="44.092314"/>
 </suite>
-<status status="FAIL" start="2024-08-09T18:01:10.820624" elapsed="32.154437"/>
-</suite>
-<suite id="s1-s2" name="DASHBOARD TEST" source="C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\Testcases\DASHBOARD_TEST">
-<suite id="s1-s2-s1" name="Dashboard" source="C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\Testcases\DASHBOARD_TEST\Dashboard.robot">
-<test id="s1-s2-s1-t1" name="DASHBOARD ELEMENTS VERIFICATION" line="6">
-<tag>robot:exit</tag>
-<status status="FAIL" start="2024-08-09T18:01:42.989541" elapsed="0.000365">Test execution stopped due to a fatal error.</status>
+<suite id="s1-s4" name="Check Image presence" source="C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\Testcases\LOGIN_PAGE_TEST\Check_Image_presence.robot">
+<test id="s1-s4-t1" name="SPIRA LOGO PRESENCE TEST" line="6">
+<kw name="Open Login Page" owner="Loginpage_Keywords" type="SETUP">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-08-23T13:58:25.332574" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000021C0E8AC140&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-08-23T13:58:25.332574" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-08-23T13:58:25.332574" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-gpu</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-08-23T13:58:25.332574" elapsed="0.002805"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:58:25.335379" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-08-23T13:58:25.335379" elapsed="1.233261"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:58:26.568640" level="INFO">Opening url 'https://spira-qa.dtskill.com/Login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-08-23T13:58:26.568640" elapsed="3.076024"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-23T13:58:34.645492" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-23T13:58:29.645215" elapsed="5.000277"/>
+</kw>
+<status status="PASS" start="2024-08-23T13:58:25.332574" elapsed="9.312918"/>
+</kw>
+<kw name="Check Image Element Presence" owner="Loginpage_Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:58:34.667204" level="INFO">Element 'xpath = //*[@id='root']/div/div[2]/div/div/div/img' is displayed.</msg>
+<arg>${IMAGE_LOCATOR}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-23T13:58:34.647509" elapsed="0.019695"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:58:34.667204" level="INFO">Element 'xpath = //*[@id='root']/div/div[2]/div/div/div/img' is displayed.</msg>
+<arg>${IMAGE_LOCATOR}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-23T13:58:34.667204" elapsed="0.000000"/>
+</kw>
+<msg time="2024-08-23T13:58:34.680635" level="INFO">${result} = PASS</msg>
+<msg time="2024-08-23T13:58:34.680635" level="INFO">${status} = None</msg>
+<var>${result}</var>
+<var>${status}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${IMAGE_LOCATOR}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-08-23T13:58:34.667204" elapsed="0.013431"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${status}' == 'PASS'</arg>
+<arg>Log</arg>
+<arg>Image element is present</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-08-23T13:58:34.680635" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${status}' == 'FAIL'</arg>
+<arg>Log</arg>
+<arg>Image element is not present</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-08-23T13:58:34.680635" elapsed="0.001005"/>
+</kw>
+<status status="PASS" start="2024-08-23T13:58:34.645492" elapsed="0.036148"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-08-23T13:58:34.681640" elapsed="2.035465"/>
+</kw>
+<status status="PASS" start="2024-08-23T13:58:25.332574" elapsed="11.388213"/>
 </test>
-<status status="FAIL" start="2024-08-09T18:01:42.988503" elapsed="0.003577"/>
+<status status="PASS" start="2024-08-23T13:58:25.318985" elapsed="11.401802"/>
 </suite>
-<suite id="s1-s2-s2" name="OtherMenu Test" source="C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\Testcases\DASHBOARD_TEST\OtherMenu_Test.robot">
-<test id="s1-s2-s2-t1" name="OTHER DROPOWN MENU Test" line="6">
-<tag>robot:exit</tag>
-<status status="FAIL" start="2024-08-09T18:01:43.011436" elapsed="0.000000">Test execution stopped due to a fatal error.</status>
+<suite id="s1-s5" name="Forgot password" source="C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\Testcases\LOGIN_PAGE_TEST\Forgot_password.robot">
+<test id="s1-s5-t1" name="FORGOT PASSWORD ELEMENT VERIFICATION" line="6">
+<kw name="Open Login Page" owner="Loginpage_Keywords" type="SETUP">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-08-23T13:58:36.736652" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000021C0E825970&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-08-23T13:58:36.736652" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-08-23T13:58:36.736652" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-gpu</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-08-23T13:58:36.736652" elapsed="0.000000"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:58:36.737768" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-08-23T13:58:36.737768" elapsed="1.217615"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:58:37.955383" level="INFO">Opening url 'https://spira-qa.dtskill.com/Login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-08-23T13:58:37.955383" elapsed="3.082601"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-23T13:58:46.046502" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-23T13:58:41.038804" elapsed="5.007698"/>
+</kw>
+<status status="PASS" start="2024-08-23T13:58:36.736652" elapsed="9.309850"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-08-23T13:58:46.046502" elapsed="0.023979"/>
+</kw>
+<kw name="Forgot Password" owner="Loginpage_Keywords">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:58:46.070481" level="INFO">Clicking link 'xpath=//*[@id='root']/div/div[2]/div/div/form/div[2]/a'.</msg>
+<arg>${FORGOT_PASSWORD}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:58:46.070481" elapsed="0.060859"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-08-23T13:58:46.131340" elapsed="2.033348"/>
+</kw>
+<doc>A test case to test the forgot password link</doc>
+<status status="PASS" start="2024-08-23T13:58:46.070481" elapsed="2.094207"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-08-23T13:58:48.164688" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-08-23T13:58:36.734480" elapsed="11.430208"/>
 </test>
-<status status="FAIL" start="2024-08-09T18:01:42.995100" elapsed="0.016336"/>
+<status status="PASS" start="2024-08-23T13:58:36.720787" elapsed="11.443901"/>
 </suite>
-<suite id="s1-s2-s3" name="SalesTracker Test" source="C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\Testcases\DASHBOARD_TEST\SalesTracker_Test.robot">
-<test id="s1-s2-s3-t1" name="Sales Tracker MENU Test" line="6">
-<tag>robot:exit</tag>
-<status status="FAIL" start="2024-08-09T18:01:43.024738" elapsed="0.001009">Test execution stopped due to a fatal error.</status>
+<suite id="s1-s6" name="Loginpage Testcases" source="C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\Testcases\LOGIN_PAGE_TEST\Loginpage_Testcases.robot">
+<test id="s1-s6-t1" name="VERIFY LOGIN FUNCTIONALITY" line="6">
+<kw name="Open Login Page" owner="Loginpage_Keywords" type="SETUP">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-08-23T13:58:48.183637" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000021C0E8AF650&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-08-23T13:58:48.180140" elapsed="0.003497"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-08-23T13:58:48.183637" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-gpu</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-08-23T13:58:48.183637" elapsed="0.000000"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:58:48.183637" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-08-23T13:58:48.183637" elapsed="1.243914"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:58:49.428232" level="INFO">Opening url 'https://spira-qa.dtskill.com/Login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-08-23T13:58:49.427551" elapsed="3.601666"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-23T13:58:58.029929" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-23T13:58:53.029217" elapsed="5.000712"/>
+</kw>
+<status status="PASS" start="2024-08-23T13:58:48.180140" elapsed="9.849789"/>
+</kw>
+<kw name="Fill Login Form" owner="Loginpage_Keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:58:58.029929" level="INFO">Typing text 'admin@gmail.com' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:58:58.029929" elapsed="0.100597"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:58:58.130656" level="INFO">Typing text '123456' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:58:58.130656" elapsed="0.072344"/>
+</kw>
+<arg>admin@gmail.com</arg>
+<arg>123456</arg>
+<status status="PASS" start="2024-08-23T13:58:58.029929" elapsed="0.173071"/>
+</kw>
+<kw name="Check Checkbox" owner="Loginpage_Keywords">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Selected" owner="Loginpage_Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-23T13:58:58.204002" elapsed="0.017085"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:58:58.222115" level="INFO">Clicking element 'xpath=//*[@id='root']/div/div[2]/div/div/form/div[2]/div/label[1]/span'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:58:58.221087" elapsed="0.040780"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:58:58.273377" level="INFO">${is_selected} = None</msg>
+<var>${is_selected}</var>
+<arg>${locator}</arg>
+<arg>checked</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:58:58.261867" elapsed="0.012509"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2024-08-23T13:58:58.274376" level="INFO">Argument types are:
+&lt;class 'NoneType'&gt;
+&lt;class 'str'&gt;</msg>
+<msg time="2024-08-23T13:58:58.274376" level="FAIL">None != true</msg>
+<arg>${is_selected}</arg>
+<arg>true</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="FAIL" start="2024-08-23T13:58:58.274376" elapsed="0.000000">None != true</status>
+</kw>
+<arg>${locator}</arg>
+<status status="FAIL" start="2024-08-23T13:58:58.204002" elapsed="0.070374">None != true</status>
+</kw>
+<msg time="2024-08-23T13:58:58.274376" level="INFO">${is_selected} = False</msg>
+<var>${is_selected}</var>
+<arg>Element Should Be Selected</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-08-23T13:58:58.204002" elapsed="0.070374"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:58:58.274376" level="INFO">Clicking element 'xpath=//*[@id='root']/div/div[2]/div/div/form/div[2]/div/label[1]/span'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:58:58.274376" elapsed="0.029999"/>
+</kw>
+<arg>not ${is_selected}</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-08-23T13:58:58.274376" elapsed="0.029999"/>
+</kw>
+<arg>${CHECKBOX}</arg>
+<status status="PASS" start="2024-08-23T13:58:58.203000" elapsed="0.101375"/>
+</kw>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Selected" owner="Loginpage_Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-23T13:58:58.305392" elapsed="0.013965"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:58:58.319357" level="INFO">Clicking element 'xpath=//*[@id='root']/div/div[2]/div/div/form/div[2]/div/label[1]/span'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:58:58.319357" elapsed="0.030956"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:58:58.360224" level="INFO">${is_selected} = None</msg>
+<var>${is_selected}</var>
+<arg>${locator}</arg>
+<arg>checked</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:58:58.350313" elapsed="0.009911"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2024-08-23T13:58:58.361225" level="INFO">Argument types are:
+&lt;class 'NoneType'&gt;
+&lt;class 'str'&gt;</msg>
+<msg time="2024-08-23T13:58:58.361225" level="FAIL">None != true</msg>
+<arg>${is_selected}</arg>
+<arg>true</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="FAIL" start="2024-08-23T13:58:58.361225" elapsed="0.000000">None != true</status>
+</kw>
+<arg>${CHECKBOX}</arg>
+<status status="FAIL" start="2024-08-23T13:58:58.305392" elapsed="0.055833">None != true</status>
+</kw>
+<msg time="2024-08-23T13:58:58.361225" level="INFO">${selected} = False</msg>
+<var>${selected}</var>
+<arg>Element Should Be Selected</arg>
+<arg>${CHECKBOX}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-08-23T13:58:58.304375" elapsed="0.056850"/>
+</kw>
+<kw name="Click Login Button" owner="Loginpage_Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:58:58.362225" level="INFO">Clicking element 'xpath=//*[@id='root']/div/div[2]/div/div/form/div[3]/button'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:58:58.362225" elapsed="0.032074"/>
+</kw>
+<status status="PASS" start="2024-08-23T13:58:58.362225" elapsed="0.032074"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-08-23T13:58:58.394299" elapsed="2.049533"/>
+</kw>
+<status status="PASS" start="2024-08-23T13:58:48.180140" elapsed="12.263692"/>
 </test>
-<status status="FAIL" start="2024-08-09T18:01:43.024738" elapsed="0.001510"/>
+<status status="PASS" start="2024-08-23T13:58:48.164688" elapsed="12.279144"/>
 </suite>
-<status status="FAIL" start="2024-08-09T18:01:42.985634" elapsed="0.043527"/>
+<suite id="s1-s7" name="Register here" source="C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\Testcases\LOGIN_PAGE_TEST\Register_here.robot">
+<test id="s1-s7-t1" name="REGISTER HERE OPTION FUNCTIONALITY" line="6">
+<kw name="Open Login Page" owner="Loginpage_Keywords" type="SETUP">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-08-23T13:59:00.465473" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000021C0E8C0FE0&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-08-23T13:59:00.465473" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-08-23T13:59:00.465473" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-gpu</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-08-23T13:59:00.465473" elapsed="0.000000"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:59:00.465473" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-08-23T13:59:00.465473" elapsed="1.251786"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:59:01.717939" level="INFO">Opening url 'https://spira-qa.dtskill.com/Login'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-08-23T13:59:01.717259" elapsed="4.067791"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-08-23T13:59:10.785576" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-08-23T13:59:05.785050" elapsed="5.000526"/>
+</kw>
+<status status="PASS" start="2024-08-23T13:59:00.465473" elapsed="10.320103"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-08-23T13:59:10.785576" elapsed="0.023588"/>
+</kw>
+<kw name="Register Here" owner="Loginpage_Keywords">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:59:10.809164" level="INFO">Clicking link 'xpath= //*[@id='root']/div/div[2]/div/div/form/div[3]/div/a'.</msg>
+<arg>${REGISTER_HERE}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:59:10.809164" elapsed="0.063865"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:59:10.873601" level="INFO">Typing text 'varun.datt@dtskill.com' into text field 'id = email'.</msg>
+<arg>id = email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:59:10.873029" elapsed="0.088195"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:59:10.961224" level="INFO">Typing text 'varun143' into text field 'id = username'.</msg>
+<arg>id = username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:59:10.961224" elapsed="0.053063"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:59:11.014287" level="INFO">Typing text '1234567' into text field 'id = password'.</msg>
+<arg>id = password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:59:11.014287" elapsed="0.050218"/>
+</kw>
+<arg>varun.datt@dtskill.com</arg>
+<arg>varun143</arg>
+<arg>1234567</arg>
+<status status="PASS" start="2024-08-23T13:59:10.809164" elapsed="0.255341"/>
+</kw>
+<kw name="Click Register Here" owner="Loginpage_Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-23T13:59:11.065505" level="INFO">Clicking element 'xpath= //*[@id='root']/div/div[2]/div/div/form/div/button'.</msg>
+<arg>${CREATE_ACCOUNT}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-23T13:59:11.064505" elapsed="0.029622"/>
+</kw>
+<status status="PASS" start="2024-08-23T13:59:11.064505" elapsed="0.030623"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-08-23T13:59:11.095128" elapsed="2.071183"/>
+</kw>
+<status status="PASS" start="2024-08-23T13:59:00.465473" elapsed="12.700838"/>
+</test>
+<status status="PASS" start="2024-08-23T13:59:00.443832" elapsed="12.722479"/>
 </suite>
-<status status="FAIL" start="2024-08-09T18:01:10.789368" elapsed="32.241793"/>
+<status status="PASS" start="2024-08-23T13:56:08.608036" elapsed="184.558275"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="7" skip="0">All Tests</stat>
+<stat pass="7" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="4" skip="0" info="combined" combined="NOT robot:exit">NOT robot:exit</stat>
 </tag>
 <suite>
-<stat pass="0" fail="7" skip="0" id="s1" name="LOGIN PAGE TEST &amp; DASHBOARD TEST">LOGIN PAGE TEST &amp; DASHBOARD TEST</stat>
-<stat pass="0" fail="4" skip="0" id="s1-s1" name="LOGIN PAGE TEST">LOGIN PAGE TEST &amp; DASHBOARD TEST.LOGIN PAGE TEST</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Check Image presence">LOGIN PAGE TEST &amp; DASHBOARD TEST.LOGIN PAGE TEST.Check Image presence</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s2" name="Forgot password">LOGIN PAGE TEST &amp; DASHBOARD TEST.LOGIN PAGE TEST.Forgot password</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s3" name="Loginpage Testcases">LOGIN PAGE TEST &amp; DASHBOARD TEST.LOGIN PAGE TEST.Loginpage Testcases</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s4" name="Register here">LOGIN PAGE TEST &amp; DASHBOARD TEST.LOGIN PAGE TEST.Register here</stat>
-<stat pass="0" fail="3" skip="0" id="s1-s2" name="DASHBOARD TEST">LOGIN PAGE TEST &amp; DASHBOARD TEST.DASHBOARD TEST</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s2-s1" name="Dashboard">LOGIN PAGE TEST &amp; DASHBOARD TEST.DASHBOARD TEST.Dashboard</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s2-s2" name="OtherMenu Test">LOGIN PAGE TEST &amp; DASHBOARD TEST.DASHBOARD TEST.OtherMenu Test</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s2-s3" name="SalesTracker Test">LOGIN PAGE TEST &amp; DASHBOARD TEST.DASHBOARD TEST.SalesTracker Test</stat>
+<stat pass="7" fail="0" skip="0" id="s1" name="Dashboard &amp; OtherMenu Test &amp; SalesTracker Test &amp; Check Image presence &amp; Forgot password &amp; Loginpage Testcases &amp; Register here">Dashboard &amp; OtherMenu Test &amp; SalesTracker Test &amp; Check Image presence &amp; Forgot password &amp; Loginpage Testcases &amp; Register here</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Dashboard">Dashboard &amp; OtherMenu Test &amp; SalesTracker Test &amp; Check Image presence &amp; Forgot password &amp; Loginpage Testcases &amp; Register here.Dashboard</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="OtherMenu Test">Dashboard &amp; OtherMenu Test &amp; SalesTracker Test &amp; Check Image presence &amp; Forgot password &amp; Loginpage Testcases &amp; Register here.OtherMenu Test</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s3" name="SalesTracker Test">Dashboard &amp; OtherMenu Test &amp; SalesTracker Test &amp; Check Image presence &amp; Forgot password &amp; Loginpage Testcases &amp; Register here.SalesTracker Test</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s4" name="Check Image presence">Dashboard &amp; OtherMenu Test &amp; SalesTracker Test &amp; Check Image presence &amp; Forgot password &amp; Loginpage Testcases &amp; Register here.Check Image presence</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s5" name="Forgot password">Dashboard &amp; OtherMenu Test &amp; SalesTracker Test &amp; Check Image presence &amp; Forgot password &amp; Loginpage Testcases &amp; Register here.Forgot password</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s6" name="Loginpage Testcases">Dashboard &amp; OtherMenu Test &amp; SalesTracker Test &amp; Check Image presence &amp; Forgot password &amp; Loginpage Testcases &amp; Register here.Loginpage Testcases</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s7" name="Register here">Dashboard &amp; OtherMenu Test &amp; SalesTracker Test &amp; Check Image presence &amp; Forgot password &amp; Loginpage Testcases &amp; Register here.Register here</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-08-09T18:01:19.765434" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=127.0.6533.100)
-Stacktrace:
-	GetHandleVerifier [0x00007FF6BC7E9632+30946]
-	(No symbol) [0x00007FF6BC79E3C9]
-	(No symbol) [0x00007FF6BC696FDA]
-	(No symbol) [0x00007FF6BC66CB85]
-	(No symbol) [0x00007FF6BC7137A7]
-	(No symbol) [0x00007FF6BC72A771]
-	(No symbol) [0x00007FF6BC70C813]
-	(No symbol) [0x00007FF6BC6DA6E5]
-	(No symbol) [0x00007FF6BC6DB021]
-	GetHandleVerifier [0x00007FF6BC91F83D+1301229]
-	GetHandleVerifier [0x00007FF6BC92BDB7+1351783]
-	GetHandleVerifier [0x00007FF6BC922A03+1313971]
-	GetHandleVerifier [0x00007FF6BC81DD06+245686]
-	(No symbol) [0x00007FF6BC7A758F]
-	(No symbol) [0x00007FF6BC7A3804]
-	(No symbol) [0x00007FF6BC7A3992]
-	(No symbol) [0x00007FF6BC79A3EF]
-	BaseThreadInitThunk [0x00007FFFDE1E257D+29]
-	RtlUserThreadStart [0x00007FFFDEA8AF28+40]
-</msg>
-<msg time="2024-08-09T18:01:25.871454" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=127.0.6533.100)
-Stacktrace:
-	GetHandleVerifier [0x00007FF6BC7E9632+30946]
-	(No symbol) [0x00007FF6BC79E3C9]
-	(No symbol) [0x00007FF6BC696FDA]
-	(No symbol) [0x00007FF6BC66CB85]
-	(No symbol) [0x00007FF6BC7137A7]
-	(No symbol) [0x00007FF6BC72A771]
-	(No symbol) [0x00007FF6BC70C813]
-	(No symbol) [0x00007FF6BC6DA6E5]
-	(No symbol) [0x00007FF6BC6DB021]
-	GetHandleVerifier [0x00007FF6BC91F83D+1301229]
-	GetHandleVerifier [0x00007FF6BC92BDB7+1351783]
-	GetHandleVerifier [0x00007FF6BC922A03+1313971]
-	GetHandleVerifier [0x00007FF6BC81DD06+245686]
-	(No symbol) [0x00007FF6BC7A758F]
-	(No symbol) [0x00007FF6BC7A3804]
-	(No symbol) [0x00007FF6BC7A3992]
-	(No symbol) [0x00007FF6BC79A3EF]
-	BaseThreadInitThunk [0x00007FFFDE1E257D+29]
-	RtlUserThreadStart [0x00007FFFDEA8AF28+40]
-</msg>
-<msg time="2024-08-09T18:01:33.886762" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=127.0.6533.100)
-Stacktrace:
-	GetHandleVerifier [0x00007FF6BC7E9632+30946]
-	(No symbol) [0x00007FF6BC79E3C9]
-	(No symbol) [0x00007FF6BC696FDA]
-	(No symbol) [0x00007FF6BC66CB85]
-	(No symbol) [0x00007FF6BC7137A7]
-	(No symbol) [0x00007FF6BC72A771]
-	(No symbol) [0x00007FF6BC70C813]
-	(No symbol) [0x00007FF6BC6DA6E5]
-	(No symbol) [0x00007FF6BC6DB021]
-	GetHandleVerifier [0x00007FF6BC91F83D+1301229]
-	GetHandleVerifier [0x00007FF6BC92BDB7+1351783]
-	GetHandleVerifier [0x00007FF6BC922A03+1313971]
-	GetHandleVerifier [0x00007FF6BC81DD06+245686]
-	(No symbol) [0x00007FF6BC7A758F]
-	(No symbol) [0x00007FF6BC7A3804]
-	(No symbol) [0x00007FF6BC7A3992]
-	(No symbol) [0x00007FF6BC79A3EF]
-	BaseThreadInitThunk [0x00007FFFDE1E257D+29]
-	RtlUserThreadStart [0x00007FFFDEA8AF28+40]
-</msg>
+<msg time="2024-08-23T13:56:08.852952" level="ERROR">Error in file 'C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\settings\Settings.robot' on line 3: Importing library 'C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\webdriver_setup.py' failed: ModuleNotFoundError: No module named 'webdriver_manager'
+Traceback (most recent call last):
+  File "C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\webdriver_setup.py", line 3, in &lt;module&gt;
+    from webdriver_manager.chrome import ChromeDriverManager
+PYTHONPATH:
+  C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation
+  C:\Users\THARUN_H\AppData\Roaming\Python\Python312\Scripts\robot.exe
+  C:\Program Files\Python312\python312.zip
+  C:\Program Files\Python312\DLLs
+  C:\Program Files\Python312\Lib
+  C:\Program Files\Python312
+  C:\Users\THARUN_H\AppData\Roaming\Python\Python312\site-packages
+  C:\Program Files\Python312\Lib\site-packages</msg>
+<msg time="2024-08-23T13:56:48.646399" level="ERROR">Error in file 'C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\settings\Settings.robot' on line 3: Importing library 'C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\webdriver_setup.py' failed: ModuleNotFoundError: No module named 'webdriver_manager'
+Traceback (most recent call last):
+  File "C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\webdriver_setup.py", line 3, in &lt;module&gt;
+    from webdriver_manager.chrome import ChromeDriverManager
+PYTHONPATH:
+  C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation
+  C:\Users\THARUN_H\AppData\Roaming\Python\Python312\Scripts\robot.exe
+  C:\Program Files\Python312\python312.zip
+  C:\Program Files\Python312\DLLs
+  C:\Program Files\Python312\Lib
+  C:\Program Files\Python312
+  C:\Users\THARUN_H\AppData\Roaming\Python\Python312\site-packages
+  C:\Program Files\Python312\Lib\site-packages</msg>
+<msg time="2024-08-23T13:57:41.244064" level="ERROR">Error in file 'C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\settings\Settings.robot' on line 3: Importing library 'C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\webdriver_setup.py' failed: ModuleNotFoundError: No module named 'webdriver_manager'
+Traceback (most recent call last):
+  File "C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\webdriver_setup.py", line 3, in &lt;module&gt;
+    from webdriver_manager.chrome import ChromeDriverManager
+PYTHONPATH:
+  C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation
+  C:\Users\THARUN_H\AppData\Roaming\Python\Python312\Scripts\robot.exe
+  C:\Program Files\Python312\python312.zip
+  C:\Program Files\Python312\DLLs
+  C:\Program Files\Python312\Lib
+  C:\Program Files\Python312
+  C:\Users\THARUN_H\AppData\Roaming\Python\Python312\site-packages
+  C:\Program Files\Python312\Lib\site-packages</msg>
+<msg time="2024-08-23T13:58:25.318985" level="ERROR">Error in file 'C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\settings\Settings.robot' on line 3: Importing library 'C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\webdriver_setup.py' failed: ModuleNotFoundError: No module named 'webdriver_manager'
+Traceback (most recent call last):
+  File "C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\webdriver_setup.py", line 3, in &lt;module&gt;
+    from webdriver_manager.chrome import ChromeDriverManager
+PYTHONPATH:
+  C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation
+  C:\Users\THARUN_H\AppData\Roaming\Python\Python312\Scripts\robot.exe
+  C:\Program Files\Python312\python312.zip
+  C:\Program Files\Python312\DLLs
+  C:\Program Files\Python312\Lib
+  C:\Program Files\Python312
+  C:\Users\THARUN_H\AppData\Roaming\Python\Python312\site-packages
+  C:\Program Files\Python312\Lib\site-packages</msg>
+<msg time="2024-08-23T13:58:36.720787" level="ERROR">Error in file 'C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\settings\Settings.robot' on line 3: Importing library 'C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\webdriver_setup.py' failed: ModuleNotFoundError: No module named 'webdriver_manager'
+Traceback (most recent call last):
+  File "C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\webdriver_setup.py", line 3, in &lt;module&gt;
+    from webdriver_manager.chrome import ChromeDriverManager
+PYTHONPATH:
+  C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation
+  C:\Users\THARUN_H\AppData\Roaming\Python\Python312\Scripts\robot.exe
+  C:\Program Files\Python312\python312.zip
+  C:\Program Files\Python312\DLLs
+  C:\Program Files\Python312\Lib
+  C:\Program Files\Python312
+  C:\Users\THARUN_H\AppData\Roaming\Python\Python312\site-packages
+  C:\Program Files\Python312\Lib\site-packages</msg>
+<msg time="2024-08-23T13:58:48.164688" level="ERROR">Error in file 'C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\settings\Settings.robot' on line 3: Importing library 'C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\webdriver_setup.py' failed: ModuleNotFoundError: No module named 'webdriver_manager'
+Traceback (most recent call last):
+  File "C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\webdriver_setup.py", line 3, in &lt;module&gt;
+    from webdriver_manager.chrome import ChromeDriverManager
+PYTHONPATH:
+  C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation
+  C:\Users\THARUN_H\AppData\Roaming\Python\Python312\Scripts\robot.exe
+  C:\Program Files\Python312\python312.zip
+  C:\Program Files\Python312\DLLs
+  C:\Program Files\Python312\Lib
+  C:\Program Files\Python312
+  C:\Users\THARUN_H\AppData\Roaming\Python\Python312\site-packages
+  C:\Program Files\Python312\Lib\site-packages</msg>
+<msg time="2024-08-23T13:59:00.461441" level="ERROR">Error in file 'C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\settings\Settings.robot' on line 3: Importing library 'C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\webdriver_setup.py' failed: ModuleNotFoundError: No module named 'webdriver_manager'
+Traceback (most recent call last):
+  File "C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\webdriver_setup.py", line 3, in &lt;module&gt;
+    from webdriver_manager.chrome import ChromeDriverManager
+PYTHONPATH:
+  C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation
+  C:\Users\THARUN_H\AppData\Roaming\Python\Python312\Scripts\robot.exe
+  C:\Program Files\Python312\python312.zip
+  C:\Program Files\Python312\DLLs
+  C:\Program Files\Python312\Lib
+  C:\Program Files\Python312
+  C:\Users\THARUN_H\AppData\Roaming\Python\Python312\site-packages
+  C:\Program Files\Python312\Lib\site-packages</msg>
 </errors>
 </robot>

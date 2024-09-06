@@ -1,29 +1,14 @@
 ==============================================================================
 Suites                                                                        
 ==============================================================================
-Suites.Dashboard                                                              
+Suites.Check Image presence                                                   
 ==============================================================================
-DASHBOARD ELEMENTS VERIFICATION                                         
-  Traceback (most recent call last):
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    File  C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\Testcases\DASHBOARD_TEST\Dashboard.robot:6
-    T:  DASHBOARD ELEMENTS VERIFICATION    
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    File  C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\Testcases\DASHBOARD_TEST\Dashboard.robot:7
-      Open Login Page    
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    File  C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\Keywords\Loginpage_Keywords.robot:5
-      Open Browser    about:blank    headless=chrome    ${driver}
-      |  ${driver} = <selenium.webdriver.chrome.webdriver.WebDriver (session="9775fce33905b0b946d52bed1b04fb38")> (WebDriver)
-______________________________________________________________________________
-| FAIL |
-Setup failed:
-ValueError: headless=chrome is not a supported browser.
+SPIRA LOGO PRESENCE TEST                                              | PASS |
 ------------------------------------------------------------------------------
-Suites.Dashboard                                                      | FAIL |
-1 test, 0 passed, 1 failed
+Suites.Check Image presence                                           | PASS |
+1 test, 1 passed, 0 failed
 ==============================================================================
-Suites                                                                | FAIL |
-1 test, 0 passed, 1 failed
+Suites                                                                | PASS |
+1 test, 1 passed, 0 failed
 ==============================================================================
 Output:  C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\Testcases\Results\pabot_results\1\output.xml

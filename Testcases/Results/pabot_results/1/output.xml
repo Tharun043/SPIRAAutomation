@@ -1,53 +1,149 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.12.3 on win32)" generated="2024-08-09T20:37:34.750603" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0.1 (Python 3.12.3 on win32)" generated="2024-09-06T18:29:15.886678" rpa="false" schemaversion="5">
 <suite id="s1" name="Suites">
-<suite id="s1-s1" name="Dashboard" source="C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\Testcases\DASHBOARD_TEST\Dashboard.robot">
-<test id="s1-s1-t1" name="DASHBOARD ELEMENTS VERIFICATION" line="6">
+<suite id="s1-s1" name="Check Image presence" source="C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\Testcases\LOGIN_PAGE_TEST\Check_Image_presence.robot">
+<test id="s1-s1-t1" name="SPIRA LOGO PRESENCE TEST" line="6">
 <kw name="Open Login Page" owner="Loginpage_Keywords" type="SETUP">
-<kw name="Create Chrome Driver" owner="webdriver_setup">
-<msg time="2024-08-09T20:37:38.767018" level="INFO">${driver} = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session="9775fce33905b0b946d52bed1b04fb38")&gt;</msg>
-<var>${driver}</var>
-<status status="PASS" start="2024-08-09T20:37:35.220139" elapsed="3.546879"/>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-09-06T18:29:19.366713" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001B808308440&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-09-06T18:29:19.366713" elapsed="0.000000"/>
 </kw>
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-08-09T20:37:38.767018" level="INFO">Opening browser 'headless=chrome' to base url 'about:blank'.</msg>
-<msg time="2024-08-09T20:37:38.767018" level="INFO">Cannot capture screenshot because no browser is open.</msg>
-<msg time="2024-08-09T20:37:38.767018" level="FAIL">ValueError: headless=chrome is not a supported browser.</msg>
-<arg>about:blank</arg>
-<arg>headless=chrome</arg>
-<arg>${driver}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="FAIL" start="2024-08-09T20:37:38.767018" elapsed="0.008055">ValueError: headless=chrome is not a supported browser.</status>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-09-06T18:29:19.370742" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-gpu</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-09-06T18:29:19.370742" elapsed="0.000000"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-09-06T18:29:19.370742" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-09-06T18:29:19.370742" elapsed="2.600777"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-09-06T18:29:21.971519" level="INFO">Opening url 'https://spira-qa.dtskill.com/Login'</msg>
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="NOT RUN" start="2024-08-09T20:37:38.775073" elapsed="0.000000"/>
+<status status="PASS" start="2024-09-06T18:29:21.971519" elapsed="20.168765"/>
 </kw>
-<status status="FAIL" start="2024-08-09T20:37:35.217625" elapsed="3.557448">ValueError: headless=chrome is not a supported browser.</status>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-06T18:29:47.140555" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-06T18:29:42.140284" elapsed="5.000271"/>
+</kw>
+<status status="PASS" start="2024-09-06T18:29:19.366713" elapsed="27.773842"/>
+</kw>
+<kw name="Check Image Element Presence" owner="Loginpage_Keywords">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-06T18:29:47.168653" level="INFO">Element 'xpath=//*[@id='root']/div/div[1]/img' is displayed.</msg>
+<arg>${IMAGE_LOCATOR}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-06T18:29:47.140555" elapsed="0.028098"/>
+</kw>
+<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-09-06T18:29:47.188277" level="INFO">Element 'xpath=//*[@id='root']/div/div[1]/img' is displayed.</msg>
+<arg>${IMAGE_LOCATOR}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-06T18:29:47.168653" elapsed="0.019624"/>
+</kw>
+<msg time="2024-09-06T18:29:47.188277" level="INFO">${result} = PASS</msg>
+<msg time="2024-09-06T18:29:47.188277" level="INFO">${status} = None</msg>
+<var>${result}</var>
+<var>${status}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${IMAGE_LOCATOR}</arg>
+<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
+<status status="PASS" start="2024-09-06T18:29:47.168653" elapsed="0.019624"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${status}' == 'PASS'</arg>
+<arg>Log</arg>
+<arg>Image element is present</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-06T18:29:47.188277" elapsed="0.001854"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${status}' == 'FAIL'</arg>
+<arg>Log</arg>
+<arg>Image element is not present</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-09-06T18:29:47.190131" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-09-06T18:29:47.140555" elapsed="0.049576"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-08-09T20:37:38.775073" elapsed="0.000000"/>
+<status status="PASS" start="2024-09-06T18:29:47.190131" elapsed="3.167209"/>
 </kw>
-<status status="FAIL" start="2024-08-09T20:37:35.217625" elapsed="3.557448">Setup failed:
-ValueError: headless=chrome is not a supported browser.</status>
+<status status="PASS" start="2024-09-06T18:29:19.363200" elapsed="30.994140"/>
 </test>
-<status status="FAIL" start="2024-08-09T20:37:34.833398" elapsed="3.941675"/>
+<status status="PASS" start="2024-09-06T18:29:15.947806" elapsed="34.410544"/>
 </suite>
-<status status="FAIL" start="2024-08-09T20:37:34.806093" elapsed="3.977602"/>
+<status status="PASS" start="2024-09-06T18:29:15.926625" elapsed="34.432742"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Suites">Suites</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1" name="Dashboard">Suites.Dashboard</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Check Image presence">Suites.Check Image presence</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2024-09-06T18:29:19.346841" level="ERROR">Error in file 'C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\settings\Settings.robot' on line 3: Importing library 'C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\webdriver_setup.py' failed: JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\webdriver_setup.py", line 6, in &lt;module&gt;
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\venv\Lib\site-packages\webdriver_manager\chrome.py", line 40, in install
+    driver_path = self._get_driver_binary_path(self.driver)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\venv\Lib\site-packages\webdriver_manager\core\manager.py", line 35, in _get_driver_binary_path
+    binary_path = self._cache_manager.find_driver(driver)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\venv\Lib\site-packages\webdriver_manager\core\driver_cache.py", line 108, in find_driver
+    metadata = self.load_metadata_content()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\venv\Lib\site-packages\webdriver_manager\core\driver_cache.py", line 137, in load_metadata_content
+    return json.load(outfile)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\json\__init__.py", line 293, in load
+    return loads(fp.read(),
+           ^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\json\__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\Python312\Lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+PYTHONPATH:
+  C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation
+  C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\venv\Scripts\robot.exe
+  C:\Program Files\Python312\python312.zip
+  C:\Program Files\Python312\DLLs
+  C:\Program Files\Python312\Lib
+  C:\Program Files\Python312
+  C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\venv
+  C:\Users\THARUN_H\Downloads\Spira_Automation-test_RPA\SPIRA_Automation\venv\Lib\site-packages</msg>
 </errors>
 </robot>
