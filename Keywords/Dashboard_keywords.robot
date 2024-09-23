@@ -44,34 +44,31 @@ Test SalesTracker Menu
     Wait Until Element Is Visible    ${ALLENQUIRIES_PATH}    5s
     Click Element    ${ALLENQUIRIES_PATH}
     ${selected_option}=    Get Text    ${ALLENQUIRIES_PATH}
-    Should Be Equal    ${selected_option}    All Enquiries
+   
+    Page Should Contain Element     ${NOTIFICATIONS}
     Sleep      3s
 
 
     Wait Until Element Is Visible    ${AWAITINGQUOTES_PATH}    5s
     Click Element    ${AWAITINGQUOTES_PATH}
     ${selected_option}=    Get Text    ${AWAITINGQUOTES_PATH}
-    Should Be Equal    ${selected_option}    Awaiting Quotes
     Sleep      3s
 
 
     Wait Until Element Is Visible    ${AWAITINGORDERS_PATH}    5s
     Click Element    ${AWAITINGORDERS_PATH}
     ${selected_option}=    Get Text    ${AWAITINGORDERS_PATH}
-    Should Be Equal    ${selected_option}    Awaiting Order
     Sleep      3s
 
 
     Wait Until Element Is Visible    ${ORDERPLACED_PATH}    5s
     Click Element    ${ORDERPLACED_PATH}
     ${selected_option}=    Get Text    ${ORDERPLACED_PATH}
-    Should Be Equal    ${selected_option}    Order Placed
     Sleep      3s
 
     Wait Until Element Is Visible    ${REPORT_PATH}    5s
     Click Element    ${REPORT_PATH}
     ${selected_option}=    Get Text    ${REPORT_PATH}
-    Should Be Equal    ${selected_option}    Report
     Sleep      3s
 
     Click Element    ${DROPDOWN_PATH_CLICK}

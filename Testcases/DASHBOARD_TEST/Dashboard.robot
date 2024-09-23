@@ -14,4 +14,5 @@ DASHBOARD ELEMENTS VERIFICATION
     Navigate To Page After Login      ${TARGET_PAGE_URL} 
     Check Image Element      
     Check For Profile Logo            ${PROFILE_LOGO}
+    
     [Teardown]    Close Browser

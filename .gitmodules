@@ -1,0 +1,3 @@
+[submodule "Spira-QA"]
+	path = Spira-QA
+	url = https://github.com/Tharun043/Spira-QA.git
